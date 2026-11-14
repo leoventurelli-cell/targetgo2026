@@ -1,0 +1,538 @@
+{
+ "nome": "Curso de Trade do Zero ao Profissional",
+ "niveis": {
+  "iniciante": {
+   "nome": "Iniciante",
+   "cor": "#2fe38a",
+   "emoji": "🟢",
+   "playlist": "Curso de Trade · Iniciante"
+  },
+  "intermediario": {
+   "nome": "Intermediário",
+   "cor": "#ffd23f",
+   "emoji": "🟡",
+   "playlist": "Curso de Trade · Intermediário"
+  },
+  "avancado": {
+   "nome": "Avançado",
+   "cor": "#ff8c1a",
+   "emoji": "🟠",
+   "playlist": "Curso de Trade · Avançado"
+  },
+  "profissional": {
+   "nome": "Profissional",
+   "cor": "#e01e37",
+   "emoji": "🔴",
+   "playlist": "Curso de Trade · Profissional"
+  },
+  "educacao": {
+   "nome": "Educação Financeira",
+   "cor": "#4da3ff",
+   "emoji": "🔵",
+   "playlist": "Educação Financeira"
+  }
+ },
+ "aulas": [
+  {
+   "nivel": "iniciante",
+   "titulo": "O que é o mercado financeiro e o que é forex",
+   "pontos": "o que é um mercado, quem compra e quem vende, o que é forex (câmbio), por que é o maior mercado do mundo, como ele se compara com bolsa, índices, commodities e cripto",
+   "ativos": [
+    "EURUSD=X",
+    "^BVSP",
+    "GC=F",
+    "BTC-USD"
+   ]
+  },
+  {
+   "nivel": "iniciante",
+   "titulo": "Pares de moedas: base, cotação, pip e spread",
+   "pontos": "como ler EUR/USD, moeda base e moeda de cotação, pares principais, secundários e exóticos, o que é pip, o que é spread e por que ele é um custo",
+   "ativos": [
+    "EURUSD=X",
+    "GBPUSD=X",
+    "USDJPY=X"
+   ]
+  },
+  {
+   "nivel": "iniciante",
+   "titulo": "Corretora, plataforma e custos",
+   "pontos": "o que faz uma corretora, como escolher (regulação, spread, comissão, saque), MetaTrader e outras plataformas, conta demo, conta cent, swap e taxas, cuidado com promessas",
+   "ativos": [
+    "EURUSD=X"
+   ]
+  },
+  {
+   "nivel": "iniciante",
+   "titulo": "Lote, alavancagem e margem sem mistério",
+   "pontos": "lote padrão, mini e micro, quanto vale o pip em cada lote, o que é alavancagem, margem, nível de margem, stop out, por que alavancagem alta quebra contas",
+   "ativos": [
+    "EURUSD=X",
+    "GC=F"
+   ]
+  },
+  {
+   "nivel": "iniciante",
+   "titulo": "Como ler um gráfico: tempo gráfico e candles",
+   "pontos": "gráfico de linha, barras e candles, abertura, fechamento, máxima e mínima, candle de alta e de baixa, tempos gráficos M5, H1, H4 e diário, qual usar para começar",
+   "ativos": [
+    "EURUSD=X"
+   ],
+   "padroes": [
+    "candle de alta",
+    "candle de baixa"
+   ]
+  },
+  {
+   "nivel": "iniciante",
+   "titulo": "Tendência de alta, de baixa e lateral",
+   "pontos": "topos e fundos, como identificar tendência, mercado lateral, por que operar a favor da tendência, erros comuns de quem opera contra",
+   "ativos": [
+    "EURUSD=X",
+    "GC=F"
+   ],
+   "padroes": [
+    "tendencia de alta",
+    "tendencia de baixa",
+    "lateral"
+   ]
+  },
+  {
+   "nivel": "iniciante",
+   "titulo": "Suporte e resistência",
+   "pontos": "o que é suporte e resistência, por que o preço reage nessas regiões, como marcar zonas e não linhas exatas, troca de polaridade, como usar no H4 e no diário",
+   "ativos": [
+    "EURUSD=X",
+    "GC=F"
+   ],
+   "padroes": [
+    "suporte",
+    "resistencia",
+    "troca de polaridade"
+   ]
+  },
+  {
+   "nivel": "iniciante",
+   "titulo": "Tipos de ordem: a mercado, limitada, stop loss e take profit",
+   "pontos": "ordem a mercado, ordens pendentes (buy limit, sell limit, buy stop, sell stop), stop loss, take profit, por que toda operação precisa de stop",
+   "ativos": [
+    "EURUSD=X"
+   ],
+   "padroes": [
+    "stop e alvo"
+   ]
+  },
+  {
+   "nivel": "iniciante",
+   "titulo": "Por que a maioria perde e como não ser a maioria",
+   "pontos": "estatísticas de perda divulgadas pelas corretoras, excesso de alavancagem, falta de stop, operar por emoção, falta de plano, o que fazer diferente desde o primeiro dia",
+   "ativos": [
+    "EURUSD=X"
+   ]
+  },
+  {
+   "nivel": "iniciante",
+   "titulo": "Os outros mercados: índices, ouro, petróleo, ações e cripto",
+   "pontos": "o que são índices (S&P 500, Nasdaq, Ibovespa), ouro e petróleo, ações, cripto, horários, volatilidade e o que muda em relação ao forex",
+   "ativos": [
+    "^GSPC",
+    "^BVSP",
+    "GC=F",
+    "CL=F",
+    "BTC-USD"
+   ]
+  },
+  {
+   "nivel": "intermediario",
+   "titulo": "Médias móveis 20, 50 e 200",
+   "pontos": "média simples e exponencial, médias 20, 50 e 200, tendência pelas médias, cruzamentos, média como suporte e resistência dinâmica, limitações",
+   "ativos": [
+    "EURUSD=X",
+    "GC=F"
+   ]
+  },
+  {
+   "nivel": "intermediario",
+   "titulo": "Padrões de candle que importam",
+   "pontos": "martelo, estrela cadente, engolfo de alta e de baixa, doji, contexto é tudo (padrão em suporte ou resistência), como não cair em falso sinal",
+   "ativos": [
+    "EURUSD=X"
+   ],
+   "padroes": [
+    "martelo",
+    "engolfo de alta",
+    "doji",
+    "estrela cadente"
+   ]
+  },
+  {
+   "nivel": "intermediario",
+   "titulo": "Padrões gráficos: topo duplo, fundo duplo, OCO e triângulos",
+   "pontos": "topo e fundo duplo, ombro-cabeça-ombro, triângulos, bandeiras, como medir o alvo do padrão, onde fica o stop",
+   "ativos": [
+    "EURUSD=X",
+    "GC=F"
+   ],
+   "padroes": [
+    "topo duplo",
+    "fundo duplo",
+    "oco",
+    "triangulo"
+   ]
+  },
+  {
+   "nivel": "intermediario",
+   "titulo": "Rompimento e reteste",
+   "pontos": "o que é rompimento, falso rompimento, esperar consolidação, reteste da região rompida, entrada no reteste com stop técnico",
+   "ativos": [
+    "GC=F",
+    "EURUSD=X"
+   ],
+   "padroes": [
+    "rompimento e reteste",
+    "falso rompimento"
+   ]
+  },
+  {
+   "nivel": "intermediario",
+   "titulo": "IFR, MACD e estocástico: quando ajudam e quando atrapalham",
+   "pontos": "como funcionam IFR, MACD e estocástico, sobrecompra e sobrevenda, divergência, por que indicador sozinho não é estratégia",
+   "ativos": [
+    "EURUSD=X"
+   ]
+  },
+  {
+   "nivel": "intermediario",
+   "titulo": "Fibonacci na prática",
+   "pontos": "retrações de 38,2%, 50% e 61,8%, como traçar do fundo ao topo, juntar Fibonacci com suporte e resistência, alvos por extensão",
+   "ativos": [
+    "GC=F",
+    "EURUSD=X"
+   ],
+   "padroes": [
+    "fibonacci"
+   ]
+  },
+  {
+   "nivel": "intermediario",
+   "titulo": "Análise em vários tempos gráficos",
+   "pontos": "tempo maior para direção, menor para entrada, exemplo diário → H4 → H1, como evitar sinais contraditórios",
+   "ativos": [
+    "EURUSD=X",
+    "GC=F"
+   ]
+  },
+  {
+   "nivel": "intermediario",
+   "titulo": "Sessões do mercado: Ásia, Londres e Nova York",
+   "pontos": "horários das sessões no horário de Brasília, sobreposição Londres-Nova York, volatilidade de cada sessão, quais pares se mexem em cada horário",
+   "ativos": [
+    "EURUSD=X",
+    "USDJPY=X",
+    "GBPUSD=X"
+   ]
+  },
+  {
+   "nivel": "avancado",
+   "titulo": "Gerenciamento de risco: quanto arriscar por operação",
+   "pontos": "risco por operação em porcentagem (1% a 2%), por que porcentagem e não lote fixo, sequência de perdas, quanto cai a conta depois de 10 stops",
+   "ativos": [
+    "EURUSD=X"
+   ]
+  },
+  {
+   "nivel": "avancado",
+   "titulo": "Tamanho de posição: calculando o lote certo",
+   "pontos": "fórmula do lote pelo risco e pelo tamanho do stop em pips, exemplos em EUR/USD e no ouro, erros comuns de cálculo",
+   "ativos": [
+    "EURUSD=X",
+    "GC=F"
+   ]
+  },
+  {
+   "nivel": "avancado",
+   "titulo": "Risco/retorno e taxa de acerto",
+   "pontos": "relação risco/retorno 1:1, 1:2, 1:3, taxa de acerto mínima para empatar, por que acertar pouco pode dar lucro",
+   "ativos": [
+    "EURUSD=X"
+   ]
+  },
+  {
+   "nivel": "avancado",
+   "titulo": "Expectativa matemática da sua estratégia",
+   "pontos": "fórmula da expectativa, ganho médio, perda média, taxa de acerto, como saber se a estratégia tem vantagem, amostra mínima de operações",
+   "ativos": [
+    "EURUSD=X"
+   ]
+  },
+  {
+   "nivel": "avancado",
+   "titulo": "Stop técnico, stop financeiro e trailing stop",
+   "pontos": "onde colocar o stop (atrás de suporte/resistência), stop por ATR, stop financeiro, quando mover o stop, trailing stop",
+   "ativos": [
+    "GC=F",
+    "EURUSD=X"
+   ],
+   "padroes": [
+    "stop e alvo"
+   ]
+  },
+  {
+   "nivel": "avancado",
+   "titulo": "Backtest: testando antes de arriscar dinheiro",
+   "pontos": "o que é backtest, regras objetivas, testar manualmente e no testador do MetaTrader, armadilhas (excesso de otimização), conta demo depois do backtest",
+   "ativos": [
+    "EURUSD=X"
+   ]
+  },
+  {
+   "nivel": "avancado",
+   "titulo": "Diário de trade: o hábito que muda resultados",
+   "pontos": "o que anotar (entrada, saída, motivo, emoção, print), revisão semanal, métricas, como o diário revela erros repetidos",
+   "ativos": [
+    "EURUSD=X"
+   ]
+  },
+  {
+   "nivel": "avancado",
+   "titulo": "Psicologia: medo, ganância e trade de vingança",
+   "pontos": "medo de perder e de ficar de fora, ganância, trade de vingança, excesso de operações, regras para parar no dia, rotina",
+   "ativos": [
+    "EURUSD=X"
+   ]
+  },
+  {
+   "nivel": "profissional",
+   "titulo": "Plano de trade completo",
+   "pontos": "mercados, horários, setups, risco, metas de processo, regras de parada, revisão, um modelo de plano para copiar",
+   "ativos": [
+    "EURUSD=X",
+    "GC=F"
+   ]
+  },
+  {
+   "nivel": "profissional",
+   "titulo": "Análise fundamentalista: juros, inflação e bancos centrais",
+   "pontos": "como juros movem moedas, Fed, BCE e Copom, inflação (CPI), emprego (payroll), diferencial de juros, carry trade",
+   "ativos": [
+    "EURUSD=X",
+    "DX-Y.NYB",
+    "BRL=X"
+   ]
+  },
+  {
+   "nivel": "profissional",
+   "titulo": "Calendário econômico e como operar notícias",
+   "pontos": "como ler o calendário econômico, notícias de alto impacto, spread e slippage em notícia, ficar de fora ou operar depois da poeira baixar",
+   "ativos": [
+    "EURUSD=X",
+    "GC=F"
+   ]
+  },
+  {
+   "nivel": "profissional",
+   "titulo": "Correlação entre mercados: dólar, ouro, juros e índices",
+   "pontos": "índice do dólar (DXY), ouro e dólar, juros americanos e ouro, correlação entre pares, como evitar dobrar o risco sem perceber",
+   "ativos": [
+    "DX-Y.NYB",
+    "GC=F",
+    "^GSPC",
+    "EURUSD=X"
+   ]
+  },
+  {
+   "nivel": "profissional",
+   "titulo": "Drawdown: como sobreviver às fases ruins",
+   "pontos": "o que é drawdown, quanto precisa recuperar depois de uma queda, reduzir risco em sequência de perdas, quando parar e revisar",
+   "ativos": [
+    "EURUSD=X"
+   ]
+  },
+  {
+   "nivel": "profissional",
+   "titulo": "Escalando a conta com segurança",
+   "pontos": "aumentar lote só com consistência, juros compostos com risco fixo, mesas proprietárias, saques regulares, o que não fazer",
+   "ativos": [
+    "EURUSD=X"
+   ]
+  },
+  {
+   "nivel": "profissional",
+   "titulo": "Trade como negócio: rotina, metas e revisão",
+   "pontos": "rotina de pré-mercado, metas de processo e não de dinheiro, custos, impostos (procure um contador), revisão mensal",
+   "ativos": [
+    "EURUSD=X"
+   ]
+  },
+  {
+   "nivel": "profissional",
+   "titulo": "Montando o seu próprio método",
+   "pontos": "juntar tendência, suporte e resistência, gatilho de entrada e gestão de risco num método simples, testar, ajustar e seguir com disciplina, resumo do curso",
+   "ativos": [
+    "EURUSD=X",
+    "GC=F"
+   ]
+  },
+  {
+   "nivel": "educacao",
+   "titulo": "O que é a taxa Selic e por que ela mexe com a sua vida",
+   "pontos": "o que é a Selic, quem decide (Copom), de quanto em quanto tempo, como ela chega no seu cartão, financiamento, poupança e investimentos",
+   "ativos": [],
+   "cenas_sugeridas": [
+    "serie:selic"
+   ]
+  },
+  {
+   "nivel": "educacao",
+   "titulo": "Juros: o preço do dinheiro",
+   "pontos": "o que são juros, por que existem, juros que você paga x juros que você recebe, taxa ao mês e ao ano, CET",
+   "ativos": [],
+   "cenas_sugeridas": [
+    "juros:1000|2|24"
+   ]
+  },
+  {
+   "nivel": "educacao",
+   "titulo": "Inflação: por que o seu dinheiro compra cada vez menos",
+   "pontos": "o que é inflação, IPCA, como é medida, o que causa inflação, meta de inflação, como proteger o poder de compra",
+   "ativos": [],
+   "cenas_sugeridas": [
+    "serie:ipca"
+   ]
+  },
+  {
+   "nivel": "educacao",
+   "titulo": "Selic e inflação juntas: como o Banco Central controla os preços",
+   "pontos": "por que o BC sobe juros quando a inflação sobe, juro real (Selic menos inflação), efeitos na economia, no dólar e na bolsa",
+   "ativos": [],
+   "cenas_sugeridas": [
+    "serie:selic,ipca"
+   ]
+  },
+  {
+   "nivel": "educacao",
+   "titulo": "Juros compostos: a força que trabalha a favor ou contra você",
+   "pontos": "juros simples x compostos, a conta, o efeito do tempo, exemplo investindo todo mês, o mesmo efeito na dívida do cartão",
+   "ativos": [],
+   "cenas_sugeridas": [
+    "juros:1000|1|120",
+    "juros:500|1|240"
+   ]
+  },
+  {
+   "nivel": "educacao",
+   "titulo": "Por que algumas moedas valem mais que outras",
+   "pontos": "valor de uma moeda é relativo, juros, inflação, confiança, balança comercial, reservas, por que 1 euro vale mais que 1 real e por que isso não diz se o país é rico",
+   "ativos": [],
+   "cenas_sugeridas": [
+    "comparar:BRL=X,EURUSD=X"
+   ]
+  },
+  {
+   "nivel": "educacao",
+   "titulo": "Por que o dólar sobe e desce",
+   "pontos": "oferta e procura de dólares, juros no Brasil e nos EUA, risco fiscal, exportação, quanto o dólar afeta preços aqui",
+   "ativos": [],
+   "cenas_sugeridas": [
+    "serie:dolar"
+   ]
+  },
+  {
+   "nivel": "educacao",
+   "titulo": "Renda fixa x renda variável: a diferença que todo mundo precisa saber",
+   "pontos": "o que é renda fixa (você sabe a regra do rendimento), o que é renda variável (preço oscila), riscos, prazos, para que serve cada uma, como combinar as duas",
+   "ativos": [],
+   "cenas_sugeridas": [
+    "serie:cdi",
+    "comparar:^BVSP"
+   ]
+  },
+  {
+   "nivel": "educacao",
+   "titulo": "CDI: o número que guia a renda fixa",
+   "pontos": "o que é o CDI, por que anda colado na Selic, o que significa render 100% do CDI, 110% do CDI, CDI x poupança",
+   "ativos": [],
+   "cenas_sugeridas": [
+    "serie:selic,cdi"
+   ]
+  },
+  {
+   "nivel": "educacao",
+   "titulo": "CDB, LCI, LCA e Tesouro Direto na prática",
+   "pontos": "o que é CDB, LCI e LCA (isenção de IR para pessoa física), Tesouro Selic, prefixado e IPCA+, FGC e seus limites, liquidez, imposto de renda regressivo",
+   "ativos": [],
+   "cenas_sugeridas": [
+    "serie:cdi"
+   ]
+  },
+  {
+   "nivel": "educacao",
+   "titulo": "Quando vale a pena CDB, Tesouro Selic, prefixado ou IPCA+",
+   "pontos": "como escolher pelo objetivo e pelo prazo (reserva, meta de 2 anos, aposentadoria), cenário de juros subindo ou caindo e o efeito no prefixado e no IPCA+, marcação a mercado, liquidez diária, comparar CDB pelo % do CDI e pelo imposto, FGC; sem recomendar produto específico, mostrando os critérios",
+   "ativos": [],
+   "cenas_sugeridas": [
+    "serie:selic,ipca",
+    "juros:10000|0.9|24"
+   ]
+  },
+  {
+   "nivel": "educacao",
+   "titulo": "Poupança: por que quase sempre perde",
+   "pontos": "regra de rendimento da poupança, comparação com CDI e inflação, quando a poupança perde para a inflação",
+   "ativos": [],
+   "cenas_sugeridas": [
+    "serie:ipca,cdi"
+   ]
+  },
+  {
+   "nivel": "educacao",
+   "titulo": "Ações e bolsa de valores para iniciantes",
+   "pontos": "o que é uma ação, B3, dividendos, como se ganha e se perde, longo prazo x especulação, Ibovespa, riscos",
+   "ativos": [],
+   "cenas_sugeridas": [
+    "ativo:^BVSP",
+    "comparar:^BVSP,^GSPC"
+   ]
+  },
+  {
+   "nivel": "educacao",
+   "titulo": "Fundos imobiliários: renda com imóveis sem comprar um imóvel",
+   "pontos": "o que é um FII, tijolo x papel, rendimentos mensais, isenção de IR nos rendimentos para pessoa física (regra atual, confirme), vacância, riscos, como analisar o básico",
+   "ativos": [],
+   "cenas_sugeridas": []
+  },
+  {
+   "nivel": "educacao",
+   "titulo": "Fundos de investimento e ETFs",
+   "pontos": "o que é um fundo, gestor, taxa de administração e de performance, come-cotas, ETFs como BOVA11 e IVVB11, quando faz sentido",
+   "ativos": [],
+   "cenas_sugeridas": [
+    "comparar:^BVSP,^GSPC"
+   ]
+  },
+  {
+   "nivel": "educacao",
+   "titulo": "Dívidas: como sair do vermelho",
+   "pontos": "juros do cartão e do cheque especial, por que a dívida cresce tão rápido, ordem para pagar, renegociar, como não voltar",
+   "ativos": [],
+   "cenas_sugeridas": [
+    "juros:1000|12|12"
+   ]
+  },
+  {
+   "nivel": "educacao",
+   "titulo": "Orçamento pessoal e reserva de emergência",
+   "pontos": "anotar gastos, regra 50/30/20, quanto guardar de reserva, onde deixar a reserva, metas",
+   "ativos": [],
+   "cenas_sugeridas": []
+  },
+  {
+   "nivel": "educacao",
+   "titulo": "Risco e retorno: não existe almoço grátis",
+   "pontos": "por que rendimento alto vem com risco, diversificação, golpes e promessas de lucro garantido, perfil de investidor",
+   "ativos": [],
+   "cenas_sugeridas": []
+  }
+ ],
+ "ritmo": "A cada 3 dias, 1 aula de educação financeira e 2 do curso de trade (enquanto houver aulas nas duas trilhas)."
+}

@@ -1,0 +1,12 @@
+edge-tts>=7.0
+requests>=2.31
+google-api-python-client>=2.100
+google-auth>=2.20
+google-auth-oauthlib>=1.0
+cryptography>=42
+pillow>=10
+yfinance>=0.2.40
+pandas>=2.0
+numpy>=1.26
+matplotlib>=3.8
+playwright>=1.44
