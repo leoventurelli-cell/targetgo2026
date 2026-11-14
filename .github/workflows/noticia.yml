@@ -1,0 +1,112 @@
+name: Radar de notícias
+
+# De hora em hora (07h a 22h, Brasília) olha as manchetes. Só vira vídeo se a notícia puder mexer forte com o
+# mercado (nota mínima em NOTICIA_IMPACTO_MINIMO, padrão 7) e no máximo NOTICIAS_POR_DIA por dia (padrão 2).
+on:
+  schedule:
+    - cron: "23 10-23 * * *"
+    - cron: "23 0-1 * * *"
+  workflow_dispatch:
+    inputs:
+      tema:
+        description: "Notícia específica (vazio = o radar escolhe)"
+        required: false
+        default: ""
+      publicar:
+        description: "Publicar no YouTube?"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+jobs:
+  noticia:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    concurrency:
+      group: painel
+      cancel-in-progress: false
+    env:
+      TZ: America/Sao_Paulo
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+      - name: Olhar as manchetes
+        id: radar
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          NOTICIA_IMPACTO_MINIMO: ${{ vars.NOTICIA_IMPACTO_MINIMO }}
+          NOTICIAS_POR_DIA: ${{ vars.NOTICIAS_POR_DIA }}
+          TEMA: ${{ github.event.inputs.tema }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from datetime import datetime, timedelta, timezone
+          import config
+          hoje = datetime.now(timezone(timedelta(hours=-3))).date().isoformat()
+          try:
+              radar = json.load(open("docs/radar.json", encoding="utf-8"))
+          except Exception:
+              radar = {}
+          feitos = radar.get("videos", 0) if radar.get("data") == hoje else 0
+          seguir = bool(os.getenv("TEMA")) or feitos < config.NOTICIAS_POR_DIA
+          open(os.environ["GITHUB_OUTPUT"], "a").write(f"seguir={'true' if seguir else 'false'}\n")
+          print("seguir" if seguir else f"limite de {config.NOTICIAS_POR_DIA} notícias hoje atingido")
+          PY
+      - name: Instalar FFmpeg e fontes
+        if: steps.radar.outputs.seguir == 'true'
+        run: |
+          command -v ffmpeg >/dev/null || (sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends ffmpeg)
+          mkdir -p fontes
+          [ -f fontes/Poppins-Bold.ttf ] || curl -sSL -o fontes/Poppins-Bold.ttf https://github.com/google/fonts/raw/main/ofl/poppins/Poppins-Bold.ttf
+      - name: Gerar e publicar (se houver notícia forte)
+        if: steps.radar.outputs.seguir == 'true'
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          YT_CLIENT_ID: ${{ vars.YT_CLIENT_ID || secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          VOZ: ${{ vars.VOZ }}
+          VELOCIDADE_VOZ: ${{ vars.VELOCIDADE_VOZ }}
+          YT_PRIVACIDADE: ${{ vars.YT_PRIVACIDADE }}
+          NOTICIA_IMPACTO_MINIMO: ${{ vars.NOTICIA_IMPACTO_MINIMO }}
+          NOTICIAS_POR_DIA: ${{ vars.NOTICIAS_POR_DIA }}
+          TEMA: ${{ github.event.inputs.tema }}
+          SO_GERAR: ${{ github.event.inputs.publicar == 'false' }}
+        run: |
+          ARGS=(--modo noticia)
+          [ -n "$TEMA" ] && ARGS+=(--tema "$TEMA")
+          [ "$SO_GERAR" = "true" ] && ARGS+=(--sem-publicar)
+          python main.py "${ARGS[@]}"
+      - name: Arquivo para download
+        if: always() && hashFiles('saida/release.json') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import json, subprocess
+          d = json.load(open("saida/release.json"))
+          open("notas.md", "w").write(d["legenda"])
+          subprocess.run(["gh", "release", "create", d["tag"], *d["arquivos"], "--title", d["titulo"],
+                          "--notes-file", "notas.md", "--latest=false"], check=True)
+          PY
+      - name: Salvar painel
+        if: always()
+        run: |
+          git config user.name "targetgo-bot"
+          git config user.email "targetgo-bot@users.noreply.github.com"
+          for f in docs/videos.json docs/radar.json docs/playlists.json youtube.token; do
+            [ -e "$f" ] && git add "$f"
+          done
+          [ -d docs/tiktok ] && git add -A docs/tiktok
+          git diff --cached --quiet || (git commit -m "radar de notícias" && git pull --rebase && git push)
