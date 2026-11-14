@@ -1,0 +1,19 @@
+name: Instalar
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  instalar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          unzip -o targetgo2026.zip -x '.github/*'
+          mkdir -p automacoes
+          unzip -j -o targetgo2026.zip '.github/workflows/*' -d automacoes
+          git rm -q targetgo2026.zip
+          git config user.name targetgo-bot
+          git config user.email targetgo-bot@users.noreply.github.com
+          git add -A
+          git commit -m "instalar o sistema"
+          git push
