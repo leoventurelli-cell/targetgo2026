@@ -1,0 +1,56 @@
+name: Relógio (aula das 8h)
+
+# O agendamento do GitHub atrasa. Este relógio espera até 07:00 (Brasília) e dispara a "Aula do dia",
+# que fica pronta antes das 8h e é agendada no YouTube para ficar pública às 08:00.
+# Ao terminar, ele mesmo agenda o próximo. Os "cron" abaixo só religam a corrente se ela cair.
+on:
+  schedule:
+    - cron: "13 6 * * *"
+    - cron: "43 18 * * *"
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: relogio
+  cancel-in-progress: true
+
+jobs:
+  esperar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - name: Esperar o horário e disparar a aula
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          python3 - <<'PY'
+          import os, subprocess, time
+          from datetime import datetime, timedelta, timezone
+          BR = timezone(timedelta(hours=-3))
+          DISPAROS = [(7, 0)]
+          agora = datetime.now(BR)
+          proximos = [(agora + timedelta(days=d)).replace(hour=h, minute=m, second=0, microsecond=0)
+                      for d in (0, 1) for h, m in DISPAROS]
+          alvo = min(t for t in proximos if t > agora - timedelta(minutes=1))
+          espera = (alvo - agora).total_seconds()
+          LIMITE = 5 * 3600 + 30 * 60
+          if espera > LIMITE:
+              print(f"{agora:%H:%M} → próximo disparo {alvo:%d/%m %H:%M}; espero 5h30 e passo o bastão")
+              time.sleep(LIMITE)
+          else:
+              print(f"{agora:%H:%M} → esperando até {alvo:%d/%m %H:%M} ({espera / 60:.0f} min)")
+              time.sleep(max(0, espera))
+              for _ in range(5):
+                  if subprocess.run(["gh", "workflow", "run", "aula.yml", "-R", os.environ["REPO"], "-f", "agendado=sim"]).returncode == 0:
+                      print("✅ aula disparada"); break
+                  time.sleep(20)
+              time.sleep(90)
+          for _ in range(5):
+              if subprocess.run(["gh", "workflow", "run", "relogio.yml", "-R", os.environ["REPO"]]).returncode == 0:
+                  break
+              time.sleep(20)
+          PY

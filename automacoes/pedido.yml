@@ -1,0 +1,42 @@
+name: Pedido pelo painel
+
+# O painel abre um "pedido" (issue). Só pedidos do dono do repositório são aceitos.
+#   [conectar:youtube] CÓDIGO   → conclui a conexão com o YouTube
+#   [aula] 7                    → gera a aula 7 de curso.json (vazio = próxima)
+#   [noticia] texto             → gera um Short sobre essa notícia
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  actions: write
+  issues: write
+
+jobs:
+  pedido:
+    if: github.event.issue.user.login == github.repository_owner && startsWith(github.event.issue.title, '[')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - env:
+          GH_TOKEN: ${{ github.token }}
+          TITULO: ${{ github.event.issue.title }}
+          NUMERO: ${{ github.event.issue.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          RESTO=$(printf '%s' "$TITULO" | sed -E 's/^\[[^]]+\][[:space:]]*//')
+          case "$TITULO" in
+            "[conectar:youtube]"*)
+              gh issue edit "$NUMERO" -R "$REPO" --title "[conectar:youtube] código recebido"
+              gh workflow run conectar_youtube.yml -R "$REPO" -f codigo="$RESTO"
+              MSG="🔗 Conectando o YouTube... em 1 minuto o painel mostra \"conectado\"." ;;
+            "[aula]"*)
+              gh workflow run aula.yml -R "$REPO" -f aula="$RESTO" -f publicar=true
+              MSG="🎓 Gerando a aula ${RESTO:-(próxima da grade)}. Leva uns 30 minutos." ;;
+            "[noticia]"*)
+              gh workflow run noticia.yml -R "$REPO" -f tema="$RESTO" -f publicar=true
+              MSG="📰 Gerando o Short da notícia. Leva uns 8 minutos." ;;
+            *) MSG="Pedido não reconhecido." ;;
+          esac
+          gh issue comment "$NUMERO" -R "$REPO" --body "$MSG"
+          gh issue close "$NUMERO" -R "$REPO"
