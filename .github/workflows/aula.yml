@@ -1,0 +1,143 @@
+name: Aula do dia
+
+# Uma aula por dia, publicada às 08:00 (Brasília). O "Relógio" dispara às 07:00; os horários abaixo são reserva
+# (o agendamento do GitHub atrasa). O passo "decidir" só deixa gerar se a aula de hoje ainda não saiu.
+on:
+  schedule:
+    - cron: "10,40 10-13 * * *"   # 07:10 a 10:40 Brasília (reserva)
+  workflow_dispatch:
+    inputs:
+      aula:
+        description: "Número da aula em curso.json (vazio = próxima da grade)"
+        required: false
+        default: ""
+      publicar:
+        description: "Publicar no YouTube? (desmarque para só gerar e baixar)"
+        type: boolean
+        default: true
+      agendado:
+        description: "Uso interno do relógio: 'sim' = aula automática do dia"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  decidir:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      rodar: ${{ steps.d.outputs.rodar }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: docs/curso_estado.json
+          sparse-checkout-cone-mode: false
+      - id: d
+        env:
+          EVENTO: ${{ github.event_name }}
+          AGENDADO: ${{ github.event.inputs.agendado }}
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          python3 - <<'PY'
+          import json, os, subprocess
+          from datetime import datetime, timedelta, timezone
+          agora = datetime.now(timezone(timedelta(hours=-3)))
+          out = open(os.environ["GITHUB_OUTPUT"], "a")
+          if os.environ["EVENTO"] != "schedule" and os.environ.get("AGENDADO") != "sim":
+              out.write("rodar=true\n"); raise SystemExit
+          try:
+              estado = json.load(open("docs/curso_estado.json", encoding="utf-8"))
+          except Exception:
+              estado = {}
+          if estado.get("ultima_data") == agora.date().isoformat():
+              print("aula de hoje já saiu"); out.write("rodar=false\n"); raise SystemExit
+          r = subprocess.run(["gh", "run", "list", "-R", os.environ["REPO"], "--workflow", "aula.yml", "--limit", "10",
+                              "--json", "databaseId,status"], capture_output=True, text=True)
+          ocupado = [x for x in json.loads(r.stdout or "[]") if str(x["databaseId"]) != os.environ["RUN_ID"]
+                     and x["status"] in ("in_progress", "queued", "waiting", "pending")]
+          if ocupado:
+              print("já tem aula sendo gerada"); out.write("rodar=false\n"); raise SystemExit
+          out.write("rodar=true\n")
+          PY
+
+  aula:
+    needs: decidir
+    if: needs.decidir.outputs.rodar == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    concurrency:
+      group: painel
+      cancel-in-progress: false
+    env:
+      TZ: America/Sao_Paulo
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Instalar FFmpeg e fontes
+        timeout-minutes: 10
+        run: |
+          if ! command -v ffmpeg >/dev/null; then
+            if ! timeout 240 bash -c "sudo apt-get -o Acquire::Retries=2 update -qq && sudo apt-get install -y -qq --no-install-recommends ffmpeg"; then
+              curl -sSL --retry 3 -o /tmp/ffmpeg.tar.xz https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz
+              mkdir -p /tmp/ffmpeg && tar -xf /tmp/ffmpeg.tar.xz -C /tmp/ffmpeg --strip-components=1
+              sudo cp /tmp/ffmpeg/ffmpeg /tmp/ffmpeg/ffprobe /usr/local/bin/
+            fi
+          fi
+          mkdir -p fontes
+          [ -f fontes/Poppins-Bold.ttf ] || curl -sSL -o fontes/Poppins-Bold.ttf https://github.com/google/fonts/raw/main/ofl/poppins/Poppins-Bold.ttf
+      - name: Instalar dependências
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium || echo "sem Chromium: thumbnail simples"
+      - name: Gerar e publicar a aula
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          YT_CLIENT_ID: ${{ vars.YT_CLIENT_ID || secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          VOZ: ${{ vars.VOZ }}
+          VELOCIDADE_VOZ: ${{ vars.VELOCIDADE_VOZ }}
+          DURACAO_AULA: ${{ vars.DURACAO_AULA }}
+          HORA_AULA: ${{ vars.HORA_AULA }}
+          YT_PRIVACIDADE: ${{ vars.YT_PRIVACIDADE }}
+          AGENDADO: ${{ github.event.inputs.agendado }}
+          AULA: ${{ github.event.inputs.aula }}
+          SO_GERAR: ${{ github.event.inputs.publicar == 'false' }}
+        run: |
+          ARGS=(--modo aula)
+          [ -n "$AULA" ] && ARGS+=(--aula "$AULA")
+          [ "$SO_GERAR" = "true" ] && ARGS+=(--sem-publicar)
+          python main.py "${ARGS[@]}"
+      - name: Arquivos para download (link direto no painel)
+        if: always() && hashFiles('saida/release.json') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import json, subprocess
+          d = json.load(open("saida/release.json"))
+          open("notas.md", "w").write(d["legenda"])
+          subprocess.run(["gh", "release", "create", d["tag"], *d["arquivos"], "--title", d["titulo"],
+                          "--notes-file", "notas.md", "--latest=false"], check=True)
+          PY
+      - name: Salvar painel
+        if: always()
+        run: |
+          git config user.name "targetgo-bot"
+          git config user.email "targetgo-bot@users.noreply.github.com"
+          for f in docs/videos.json docs/curso_estado.json docs/playlists.json docs/config.json youtube.token; do
+            [ -e "$f" ] && git add "$f"
+          done
+          [ -d docs/tiktok ] && git add -A docs/tiktok
+          git diff --cached --quiet || (git commit -m "aula do dia" && git pull --rebase && git push)
