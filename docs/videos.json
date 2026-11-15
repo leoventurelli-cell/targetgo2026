@@ -105,5 +105,58 @@
   "celular": "tiktok/video-20261115-0346-2.mp4",
   "youtube": "https://youtube.com/shorts/ebTbJIxs-4k",
   "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/43686750705"
+ },
+ {
+  "data": "2026-11-15T07:12:08-03:00",
+  "titulo": "Pares de moedas: base, cotação, pip e spread explicados do zero",
+  "assunto": "Pares de moedas, pip e spread",
+  "legenda": "Você sabe o que realmente significa EUR/USD? Descubra o pip e o spread que podem comer seu lucro!\n\n#trade #forex #fyp",
+  "segundos": 467,
+  "formato": "longo",
+  "textos": {
+   "titulo_youtube": "Pares de moedas: base, cotação, pip e spread explicados do zero",
+   "descricao_youtube": "Descubra como ler EUR/USD, entenda moeda base e de cotação, conheça pares principais, secundários e exóticos, aprenda o que é pip e spread e por que eles são custos essenciais no Forex. Ideal para iniciantes que querem dominar o mercado de moedas.\n\n📚 🟢 Iniciante · Aula 02: Pares de moedas: base, cotação, pip e spread\n▶ Próxima aula: Corretora, plataforma e custos\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#trade #forex #educacaofinanceira",
+   "legenda_tiktok": "Você sabe o que realmente significa EUR/USD? Descubra o pip e o spread que podem comer seu lucro!",
+   "hashtags_tiktok": "#trade #forex #fyp",
+   "tags_youtube": "forex, pares de moedas, pip, spread, euro dólar, dólar iene, GBP/USD, USD/JPY, trading para iniciantes, educação financeira, curso de trade, target go, como ler pares de moedas, custo de spread, mercado forex"
+  },
+  "aula": {
+   "indice": 1,
+   "nivel": "iniciante",
+   "numero": 2,
+   "titulo_aula": "Pares de moedas: base, cotação, pip e spread"
+  },
+  "id": "video-20261115-0712-3",
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261115-0712-3/pares-de-moedas-base-cotacao-pip-e-sprea.mp4",
+  "capa": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261115-0712-3/pares-de-moedas-base-cotacao-pip-e-sprea-capa.jpg",
+  "youtube": "https://youtu.be/TRJlkkDPKBQ",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/43701907048"
+ },
+ {
+  "data": "2026-11-15T07:12:17-03:00",
+  "titulo": "Pares de moedas: pip e spread para iniciantes",
+  "assunto": "Pares de moedas, pip e spread",
+  "legenda": "Você sabe o que realmente significa EUR/USD? Descubra o pip e o spread que podem comer seu lucro!\nAula completa no YouTube: Target Go\n\n#trade #forex #fyp",
+  "segundos": 58,
+  "formato": "curto",
+  "textos": {
+   "titulo_youtube": "Pares de moedas: pip e spread para iniciantes",
+   "descricao_youtube": "Pares de moedas: base, cotação, pip e spread explicados do zero\n\n▶ AULA COMPLETA: https://youtu.be/TRJlkkDPKBQ\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#trade #forex #educacaofinanceira #shorts",
+   "legenda_tiktok": "Você sabe o que realmente significa EUR/USD? Descubra o pip e o spread que podem comer seu lucro!\nAula completa no YouTube: Target Go",
+   "hashtags_tiktok": "#trade #forex #fyp",
+   "tags_youtube": "forex, pares de moedas, pip, spread, euro dólar, dólar iene, GBP/USD, USD/JPY, trading para iniciantes, educação financeira, curso de trade, target go, como ler pares de moedas, custo de spread, mercado forex"
+  },
+  "chamada_de": "video-20261115-0712-3",
+  "id": "video-20261115-0712-3-short",
+  "aula": {
+   "indice": 1,
+   "nivel": "iniciante",
+   "numero": 2,
+   "titulo_aula": "Pares de moedas: base, cotação, pip e spread"
+  },
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261115-0712-3/pares-de-moedas-base-cotacao-pip-e-sprea-short.mp4",
+  "celular": "tiktok/video-20261115-0712-3-short.mp4",
+  "youtube": "https://youtube.com/shorts/SmRYfA5q9Ko",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/43701907048"
  }
 ]
