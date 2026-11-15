@@ -59,7 +59,7 @@ def _figura(w: int, h: int):
     fig = plt.figure(figsize=(w / 100, h / 100), dpi=100, facecolor=FUNDO)
     vertical = h > w
     # área livre embaixo para a legenda (no Short a legenda fica no meio-baixo)
-    ax = fig.add_axes([0.07, 0.37, 0.86, 0.33] if vertical else [0.05, 0.22, 0.88, 0.62], facecolor=FUNDO)
+    ax = fig.add_axes([0.07, 0.37, 0.86, 0.33] if vertical else [0.05, 0.31, 0.88, 0.52], facecolor=FUNDO)
     for lado in ax.spines.values():
         lado.set_visible(False)
     ax.grid(True, color=GRADE, linewidth=1)
@@ -69,16 +69,16 @@ def _figura(w: int, h: int):
 
 
 def _titulo(fig, texto: str, sub: str, vertical: bool, cor=AMARELO):
-    y = 0.745 if vertical else 0.93
+    y = 0.745 if vertical else 0.90
     fig.text(0.07 if vertical else 0.05, y, texto, fontsize=56 if vertical else 40, color=TEXTO, weight="bold",
              va="bottom")
     if sub:
-        fig.text(0.07 if vertical else 0.05, y - (0.025 if vertical else 0.045), sub, fontsize=28 if vertical else 22,
+        fig.text(0.07 if vertical else 0.05, y - (0.025 if vertical else 0.042), sub, fontsize=28 if vertical else 22,
                  color=cor, va="bottom")
 
 
 def _rodape(fig, texto: str, vertical: bool):
-    fig.text(0.93 if vertical else 0.95, 0.345 if vertical else 0.155, texto, fontsize=18 if vertical else 14,
+    fig.text(0.93 if vertical else 0.95, 0.345 if vertical else 0.865, texto, fontsize=18 if vertical else 14,
              color=SUAVE, ha="right")
 
 
@@ -290,7 +290,7 @@ def _card(destino: Path, spec: str, w: int, h: int):
         ax.axvline(x, color=GRADE, linewidth=0.6, alpha=0.6)
     for y in np.linspace(0, 1, 15):
         ax.axhline(y, color=GRADE, linewidth=0.6, alpha=0.6)
-    caixa = (0.08, 0.40, 0.84, 0.44) if vertical else (0.08, 0.20, 0.84, 0.61)
+    caixa = (0.08, 0.40, 0.84, 0.44) if vertical else (0.10, 0.28, 0.80, 0.55)
     ax.add_patch(FancyBboxPatch(caixa[:2], caixa[2], caixa[3], boxstyle="round,pad=0.01,rounding_size=0.03",
                                 facecolor="#121a33", edgecolor=AMARELO, linewidth=4))
     topo = caixa[1] + caixa[3] - 0.06

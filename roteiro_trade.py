@@ -19,7 +19,13 @@ ESTILO = """Jeito de falar (muito importante, a narração tem que soar humana, 
 - Nunca prometa lucro, nunca diga "compre" ou "venda" um ativo específico, nunca dê sinal de entrada.
   Ensine critérios e riscos. Mostre o lado ruim também."""
 
-CENAS = f"""Cada parte tem "cenas": 3 a 5 imagens, na ordem em que o assunto aparece na fala. Use SÓ estes formatos:
+CENAS = f"""IMAGENS FIÉIS À FALA (o mais importante do vídeo): cada parte tem "cenas", uma lista de 5 a 9 itens
+{{"frase": "...", "cena": "..."}}, na ordem da narração. "frase" = 3 a 8 palavras copiadas EXATAMENTE da narração
+daquela parte, no ponto em que a imagem deve entrar; a imagem fica na tela até a próxima frase. A 1ª frase é o
+começo da parte. A imagem tem que mostrar EXATAMENTE o que está sendo dito naquele momento: falou de pip → card
+do pip com a conta; falou de suporte → padrao:suporte; falou do Ibovespa → ativo:^BVSP; falou da Selic → serie:selic.
+Troque de imagem a cada 10 a 25 segundos de fala (umas 25 a 60 palavras). Não repita a mesma cena seguida.
+Use SÓ estes formatos em "cena":
 - "padrao:NOME" desenho didático. NOME é um destes: {", ".join(graficos.PADROES)}
 - "ativo:TICKER" gráfico real de candles (6 meses). Tickers: EURUSD=X, GBPUSD=X, USDJPY=X, BRL=X, GC=F (ouro),
   CL=F (petróleo), ^GSPC (S&P 500), ^IXIC (Nasdaq), ^BVSP (Ibovespa), DX-Y.NYB (índice do dólar), BTC-USD.
@@ -29,8 +35,11 @@ CENAS = f"""Cada parte tem "cenas": 3 a 5 imagens, na ordem em que o assunto apa
 - "juros:CAPITAL|TAXA_AO_MES|MESES" curva de juros compostos x simples (ex: "juros:1000|1|120").
 - "card:TÍTULO|linha|linha" quadro com o conceito, a fórmula ou a conta da aula (até 4 linhas curtas,
   ex: "card:Tamanho do lote|Risco: R$ 50|Stop: 25 pips|Lote: 0,20"). Use cards com frequência para fixar a ideia.
-- Termo EM INGLÊS para vídeo de banco de imagens, só de vez em quando para respirar: "trader looking at charts",
-  "stock exchange screens", "person counting money", "calculator and notebook", "bank building".
+- Termo EM INGLÊS para vídeo de banco de imagens (1 ou 2 por parte, quando a fala for sobre pessoas, dinheiro,
+  bancos, empresas ou o dia a dia): "trader looking at charts", "stock exchange screens", "person counting money",
+  "calculator and notebook", "bank building", "currency exchange office", "oil refinery", "gold bars".
+NUNCA escreva na narração os códigos (EURUSD=X, ^BVSP, GC=F, BTC-USD) nem as marcações de cena: na fala use o nome
+normal (euro-dólar, Ibovespa, ouro, bitcoin, índice do dólar).
 """
 
 PROMPT_AULA = """Você é o roteirista e professor do canal Target Go, o melhor curso gratuito de trade e
@@ -72,7 +81,8 @@ Responda SOMENTE com JSON:
   "hashtags": ["#trade", "#forex", "#educacaofinanceira"],
   "hashtags_tiktok": ["#trade", "#forex", "#fyp"],
   "tags_youtube": ["até 15 tags"],
-  "partes": [{{"titulo": "Abertura", "texto": "narração completa", "cenas": ["card:...", "padrao:..."]}}]
+  "partes": [{{"titulo": "Abertura", "texto": "narração completa",
+              "cenas": [{{"frase": "primeiras palavras da parte", "cena": "card:..."}}, {{"frase": "trecho exato", "cena": "padrao:..."}}]}}]
 }}"""
 
 PROMPT_NOTICIA = """Você é o apresentador do canal Target Go e explica notícias que podem mexer com o mercado,
@@ -151,9 +161,43 @@ def _revisar(dados: dict, extra: str = "") -> dict:
     return dados
 
 
-def _limpar_cenas(cenas, reserva: str) -> list[str]:
-    boas = [str(c).strip() for c in cenas or [] if str(c).strip()]
-    return boas[:6] or [reserva]
+FALADOS = {"EURUSD=X": "euro-dólar", "GBPUSD=X": "libra-dólar", "USDJPY=X": "dólar-iene", "BRL=X": "dólar-real",
+           "GC=F": "ouro", "CL=F": "petróleo", "^GSPC": "S&P 500", "^IXIC": "Nasdaq", "^BVSP": "Ibovespa",
+           "DX-Y.NYB": "índice do dólar", "BTC-USD": "bitcoin", "ETH-USD": "ethereum", "^DJI": "Dow Jones"}
+
+
+def _fala_limpa(t: str) -> str:
+    """Tira da narração códigos de ticker e marcações de cena que a IA às vezes deixa escapar."""
+    import re
+    t = limpar_narracao(t)
+    t = re.sub(r"\b(?:padrao|ativo|comparar|serie|juros|card)\s*:\s*", "", t, flags=re.I)
+    for cod, nome in FALADOS.items():
+        t = re.sub(r"(?<![\w^])" + re.escape(cod) + r"(?![\w])", nome, t)
+    t = re.sub(r"\s*\(\s*(?:Ibovespa|ouro|bitcoin|euro-dólar|índice do dólar|petróleo)\s*\)", "", t)
+    t = re.sub(r"\b(Ibovespa|bitcoin|ouro|euro-dólar)\s+\1\b", r"\1", t, flags=re.I)
+    t = re.sub(r"\|\s*(?:mm|sr|1h)\b", "", t)
+    return re.sub(r"[ \t]{2,}", " ", t).strip()
+
+
+def _limpar_cenas(cenas, reserva: str, limite: int = 9) -> list[str]:
+    boas = []
+    for c in cenas or []:
+        c = c.get("cena", "") if isinstance(c, dict) else c
+        if str(c).strip():
+            boas.append(str(c).strip())
+    return boas[:limite] or [reserva]
+
+
+def _ancoras(cenas) -> list[dict]:
+    """[{'frase', 'cena'}] na ordem; cenas sem frase ficam com frase vazia (o vídeo distribui por tempo)."""
+    saida = []
+    for c in cenas or []:
+        if isinstance(c, dict) and str(c.get("cena", "")).strip():
+            saida.append({"frase": str(c.get("frase", "")).strip(), "cena": str(c["cena"]).strip()})
+        elif isinstance(c, str) and c.strip():
+            saida.append({"frase": "", "cena": c.strip()})
+    tirar_repetida = [a for i, a in enumerate(saida) if i == 0 or a["cena"] != saida[i - 1]["cena"]]
+    return tirar_repetida[:9]
 
 
 def gerar_aula(aula: dict, curso: dict, numero: int, total_nivel: int, anterior: str, proxima: str) -> dict:
@@ -181,9 +225,10 @@ def gerar_aula(aula: dict, curso: dict, numero: int, total_nivel: int, anterior:
         raise ValueError("A aula veio sem partes suficientes.")
     reserva = f"card:{aula['titulo'][:40]}"
     for p in partes:
-        p["texto"] = limpar_narracao(p["texto"])
+        p["texto"] = _fala_limpa(p["texto"])
         p["titulo"] = str(p.get("titulo") or "Parte").strip()[:60]
-        p["cenas"] = _limpar_cenas(p.get("cenas"), reserva)
+        p["ancoras"] = _ancoras(p.get("cenas")) or [{"frase": "", "cena": reserva}]
+        p["cenas"] = [a["cena"] for a in p["ancoras"]]
     dados["partes"] = partes
     dados["roteiro"] = "\n\n".join(p["texto"] for p in partes)
     dados["cenas"] = [c for p in partes for c in p["cenas"]]
@@ -208,7 +253,7 @@ def gerar_noticia(noticia: dict, movimentos: list[dict]) -> dict:
     dados = _pedir(PROMPT_NOTICIA.format(segundos=segundos, palavras=palavras, idioma=config.IDIOMA, fatos=fatos,
                                          movimentos=mov, estilo=ESTILO, tickers=tickers))
     dados = _revisar(dados, "É uma notícia: só valem os fatos e movimentos fornecidos abaixo.\n" + fatos + "\n" + mov)
-    dados["roteiro"] = limpar_narracao(dados.get("roteiro", ""))
+    dados["roteiro"] = _fala_limpa(dados.get("roteiro", ""))
     if len(dados["roteiro"].split()) < 60:
         raise ValueError("Roteiro da notícia veio curto demais.")
     dados["cenas"] = _limpar_cenas(dados.get("cenas"), f"ativo:{(noticia.get('ativos') or ['GC=F'])[0]}|1h")

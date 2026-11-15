@@ -548,6 +548,57 @@ def _plano_curto(roteiro: dict, palavras: list[dict], total: float) -> list[tupl
     return [(c, max(fim - ini, 0.5)) for c, ini, fim in zip(cenas, cortes, cortes[1:])]
 
 
+def _norm(t: str) -> str:
+    import re
+    import unicodedata
+    t = unicodedata.normalize("NFKD", str(t).lower()).encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9 ]+", " ", t).strip()
+
+
+def _plano_ancorado(roteiro: dict, palavras: list[dict], inicios: list[float], total: float):
+    """Cada imagem entra na frase em que o assunto é falado (frase-âncora do roteiro) e fica até a próxima."""
+    plano = []
+    limites = inicios + [total]
+    toks = [(_norm(p["texto"]), p["inicio"]) for p in palavras]
+    for parte, ini, fim in zip(roteiro["partes"], limites, limites[1:]):
+        ancoras = parte.get("ancoras") or [{"frase": "", "cena": c} for c in parte.get("cenas", [])]
+        idx = [i for i, (_, t) in enumerate(toks) if ini - 0.05 <= t < fim]
+        cortes, pos = [], 0
+        for n, a in enumerate(ancoras):
+            alvo = _norm(a.get("frase", "")).split()[:4]
+            achou = None
+            if alvo and n > 0:
+                for k in range(pos, len(idx)):
+                    janela = [toks[idx[j]][0] for j in range(k, min(k + len(alvo), len(idx)))]
+                    if janela[:len(alvo)] == alvo or (len(alvo) >= 3 and janela[:2] == alvo[:2] and alvo[2] in janela):
+                        achou = k
+                        break
+            if n == 0:
+                cortes.append((ini, a["cena"]))
+            elif achou is not None:
+                cortes.append((toks[idx[achou]][1], a["cena"]))
+                pos = achou + 1
+            else:  # frase não encontrada: entra no meio do espaço que sobrou
+                cortes.append((None, a["cena"]))
+        # preenche os cortes sem frase encontrada distribuindo por tempo entre os vizinhos
+        tempos = [c[0] for c in cortes] + [fim]
+        for i in range(len(cortes)):
+            if tempos[i] is None:
+                j = next(k for k in range(i + 1, len(tempos)) if tempos[k] is not None)
+                anterior = tempos[i - 1]
+                for m in range(i, j):
+                    tempos[m] = anterior + (tempos[j] - anterior) * (m - i + 1) / (j - i + 1)
+        for (_, cena), t0, t1 in zip(cortes, tempos, tempos[1:]):
+            if t1 - t0 >= 0.8:
+                plano.append((cena, t1 - t0))
+            elif plano:  # trecho curto demais: estende a imagem anterior
+                plano[-1] = (plano[-1][0], plano[-1][1] + max(t1 - t0, 0))
+    soma = sum(s for _, s in plano)
+    if plano and abs(soma - total) > 0.05:
+        plano[-1] = (plano[-1][0], plano[-1][1] + total - soma)
+    return plano
+
+
 def _plano_longo(roteiro: dict, inicios: list[float], total: float) -> list[tuple[str, float]]:
     """Longo: cada parte é picada em cenas de ~7s, alternando os termos daquela parte."""
     plano = []
@@ -752,7 +803,10 @@ def montar(roteiro: dict, audio: Path, palavras: list[dict], pasta: Path,
     usar_formato(formato)
     total = duracao(audio) + CAUDA
     if formato == "longo":
-        plano = _plano_longo(roteiro, inicios_partes, total)
+        if any(p.get("ancoras") for p in roteiro["partes"]):
+            plano = _plano_ancorado(roteiro, palavras, inicios_partes, total)
+        else:
+            plano = _plano_longo(roteiro, inicios_partes, total)
         titulos = [(ini + 0.2, p["titulo"]) for p, ini in zip(roteiro["partes"], inicios_partes)][1:]
     else:
         plano = _plano_curto(roteiro, palavras, total)

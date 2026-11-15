@@ -105,7 +105,7 @@ def _registrar(item: dict):
     _gravar(DOCS / "videos.json", lista[-500:])
 
 
-def _youtube(arquivo, r: dict, formato: str, capa=None, playlist: str | None = None) -> str | None:
+def _youtube(arquivo, r: dict, formato: str, capa=None, playlist: str | list | None = None) -> str | None:
     import publicar_youtube
     import youtube_token
     if not (config.PUBLICAR_YOUTUBE and youtube_token.conectado()):
@@ -116,11 +116,13 @@ def _youtube(arquivo, r: dict, formato: str, capa=None, playlist: str | None = N
     except Exception:
         traceback.print_exc()
         return "ERRO"
-    if playlist:
+    for nome_pl in ([playlist] if isinstance(playlist, str) else playlist or []):
+        if not nome_pl or url == "ERRO":
+            continue
         try:
-            publicar_youtube.adicionar_na_playlist(url, playlist, r.get("descricao_playlist", ""))
+            publicar_youtube.adicionar_na_playlist(url, nome_pl, r.get("descricao_playlist", ""))
         except Exception as erro:
-            print(f"::warning title=Playlist::Não consegui pôr na playlist '{playlist}': {erro}")
+            print(f"::warning title=Playlist::Não consegui pôr na playlist '{nome_pl}': {erro}")
     return url
 
 
@@ -196,7 +198,8 @@ def fazer_aula(indice: int | None, publicar: bool):
         alvo = datetime.now(BR).replace(hour=h, minute=mi, second=0, microsecond=0)
         if alvo > datetime.now(BR) + timedelta(minutes=3):
             r["publicar_em"] = alvo.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
-    url = _youtube(destino, r, "longo", capa, nivel["playlist"]) if publicar else None
+    playlists = [curso.get("playlist_geral") if aula["nivel"] != "educacao" else None, nivel["playlist"]]
+    url = _youtube(destino, r, "longo", capa, [p for p in playlists if p]) if publicar else None
     info_aula = {"indice": i, "nivel": aula["nivel"], "numero": numero, "titulo_aula": aula["titulo"]}
     _registrar({"titulo": r["titulo"], "assunto": r.get("assunto", ""), "legenda": _legenda(r), "segundos": round(segundos),
                 "formato": "longo", "textos": _textos(r, "longo"), "aula": info_aula, "id": tag,

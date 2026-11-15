@@ -114,6 +114,16 @@ def adicionar_na_playlist(url_video: str, nome: str, descricao: str = "") -> str
     except Exception:
         listas = {}
     pid = listas.get(nome)
+    if not pid:  # já existe no canal com esse nome (criada à mão)? usa ela
+        pedido = youtube.playlists().list(part="snippet", mine=True, maxResults=50)
+        while pedido is not None and not pid:
+            r = pedido.execute()
+            pid = next((i["id"] for i in r.get("items", [])
+                        if i["snippet"]["title"].strip().lower() == nome.strip().lower()), None)
+            pedido = youtube.playlists().list_next(pedido, r)
+        if pid:
+            listas[nome] = pid
+            ARQUIVO_PLAYLISTS.write_text(json.dumps(listas, ensure_ascii=False, indent=1), encoding="utf-8")
     if not pid:
         r = youtube.playlists().insert(part="snippet,status", body={
             "snippet": {"title": nome[:150], "description": descricao[:4900], "defaultLanguage": "pt-BR"},
