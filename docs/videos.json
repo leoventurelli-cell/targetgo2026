@@ -1,1 +1,57 @@
-[]
+[
+ {
+  "data": "2026-11-14T21:26:59-03:00",
+  "titulo": "Mercado Financeiro e Forex: o que são e por que são gigantes?",
+  "assunto": "Introdução ao mercado financeiro e Forex",
+  "legenda": "Você sabe por que o Forex é o maior mercado do mundo? Descubra agora!\n\n#trade #forex #fyp",
+  "segundos": 539,
+  "formato": "longo",
+  "textos": {
+   "titulo_youtube": "Mercado Financeiro e Forex: o que são e por que são gigantes?",
+   "descricao_youtube": "Nesta primeira aula do Curso de Trade do Zero ao Profissional você vai entender o que é um mercado, quem são os participantes e por que o Forex domina o cenário global. Vamos comparar o Forex com bolsa, índices, commodities e cripto, usando exemplos reais como EURUSD, ^BVSP, GC=F e BTC-USD. Aprenda os conceitos básicos sem prometer lucro e descubra como analisar o maior mercado do mundo. Conteúdo educativo e essencial para quem está começando a operar.\n\n📚 🟢 Iniciante · Aula 01: O que é o mercado financeiro e o que é forex\n▶ Próxima aula: Pares de moedas: base, cotação, pip e spread\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#trade #forex #educacaofinanceira",
+   "legenda_tiktok": "Você sabe por que o Forex é o maior mercado do mundo? Descubra agora!",
+   "hashtags_tiktok": "#trade #forex #fyp",
+   "tags_youtube": "mercado financeiro, forex, curso de trade, trading para iniciantes, o que é forex, bolsa de valores, índices, commodities, criptomoedas, EURUSD, BVSP, ouro, BTC, educação financeira, trading zero ao profissional"
+  },
+  "aula": {
+   "indice": 0,
+   "nivel": "iniciante",
+   "numero": 1,
+   "titulo_aula": "O que é o mercado financeiro e o que é forex"
+  },
+  "id": "video-20261114-2126-2",
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261114-2126-2/mercado-financeiro-e-forex-o-que-sao-e-p.mp4",
+  "capa": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261114-2126-2/mercado-financeiro-e-forex-o-que-sao-e-p-capa.jpg",
+  "youtube": "https://youtu.be/Vrunfgp12iI",
+  "manual": true,
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/43657373291"
+ },
+ {
+  "data": "2026-11-14T21:27:09-03:00",
+  "titulo": "Mercado e Forex: por onde começar?",
+  "assunto": "Introdução ao mercado financeiro e Forex",
+  "legenda": "Você sabe por que o Forex é o maior mercado do mundo? Descubra agora!\nAula completa no YouTube: Target Go\n\n#trade #forex #fyp",
+  "segundos": 58,
+  "formato": "curto",
+  "textos": {
+   "titulo_youtube": "Mercado e Forex: por onde começar?",
+   "descricao_youtube": "Mercado Financeiro e Forex: o que são e por que são gigantes?\n\n▶ AULA COMPLETA: https://youtu.be/Vrunfgp12iI\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#trade #forex #educacaofinanceira #shorts",
+   "legenda_tiktok": "Você sabe por que o Forex é o maior mercado do mundo? Descubra agora!\nAula completa no YouTube: Target Go",
+   "hashtags_tiktok": "#trade #forex #fyp",
+   "tags_youtube": "mercado financeiro, forex, curso de trade, trading para iniciantes, o que é forex, bolsa de valores, índices, commodities, criptomoedas, EURUSD, BVSP, ouro, BTC, educação financeira, trading zero ao profissional"
+  },
+  "chamada_de": "video-20261114-2126-2",
+  "id": "video-20261114-2126-2-short",
+  "aula": {
+   "indice": 0,
+   "nivel": "iniciante",
+   "numero": 1,
+   "titulo_aula": "O que é o mercado financeiro e o que é forex"
+  },
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261114-2126-2/mercado-financeiro-e-forex-o-que-sao-e-p-short.mp4",
+  "celular": "tiktok/video-20261114-2126-2-short.mp4",
+  "youtube": "https://youtube.com/shorts/hvU2zWFdsXk",
+  "manual": true,
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/43657373291"
+ }
+]
