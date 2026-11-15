@@ -53,5 +53,31 @@
   "youtube": "https://youtube.com/shorts/hvU2zWFdsXk",
   "manual": true,
   "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/43657373291"
+ },
+ {
+  "data": "2026-11-14T23:53:13-03:00",
+  "titulo": "Fed avisa nova alta de juros, dólar sobe e real cai",
+  "assunto": "Fed sinaliza mais alta de juros e mercado reage",
+  "legenda": "Como a alta de juros afeta seu bolso?\n\n#mercadofinanceiro #forex #fyp",
+  "segundos": 66,
+  "formato": "curto",
+  "textos": {
+   "titulo_youtube": "Fed avisa nova alta de juros, dólar sobe e real cai",
+   "descricao_youtube": "Autoridades do Fed enviam sinais de postura agressiva, gerando expectativa de três aumentos consecutivos nas taxas. Wall Street já refletiu com alta no S&P 500 e queda do real frente ao dólar. Fonte: Vietnam.vn, 14/11/2026.\n\n📰 Fonte: Vietnam.vn – https://news.google.com/rss/articles/CBMiswFBVV95cUxPQ1J6Sy1ialNjV1EzZk8xdlZlUjYyUlVQdHZUal9nYlFBaWMtcEZLY2VpZU51eFF0UV9mNjhzODFvVHhsWEhpZlhZOENkUEx3VmVYdVFfamcxekN6b09zWUdyNUFKaWRqeGphOV9STVhYRDg1UXplbm5WeXVhdVJXUTJacm53UC1ZSW1zRUJHcjI0UnVpTllNRS1tNjloMjhUWGFydUxkYmJ5NWI4WUNJcWxxUQ?oc=5\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#mercadofinanceiro #forex #noticias #shorts",
+   "legenda_tiktok": "Como a alta de juros afeta seu bolso?",
+   "hashtags_tiktok": "#mercadofinanceiro #forex #fyp",
+   "tags_youtube": "Fed, taxas de juros, dólar, real, S&P 500, forex, investimento, mercado financeiro, cripto, economia"
+  },
+  "noticia": {
+   "manchete": "Autoridades do Fed enviam sinais de postura agressiva, Wall Street antecipa três aumentos consecutivos nas taxas de juros.",
+   "fonte": "Vietnam.vn",
+   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPQ1J6Sy1ialNjV1EzZk8xdlZlUjYyUlVQdHZUal9nYlFBaWMtcEZLY2VpZU51eFF0UV9mNjhzODFvVHhsWEhpZlhZOENkUEx3VmVYdVFfamcxekN6b09zWUdyNUFKaWRqeGphOV9STVhYRDg1UXplbm5WeXVhdVJXUTJacm53UC1ZSW1zRUJHcjI0UnVpTllNRS1tNjloMjhUWGFydUxkYmJ5NWI4WUNJcWxxUQ?oc=5",
+   "impacto": 9.0
+  },
+  "id": "video-20261114-2353-1",
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261114-2353-1/fed-avisa-nova-alta-de-juros-dolar-sobe.mp4",
+  "celular": "tiktok/video-20261114-2353-1.mp4",
+  "youtube": "https://youtube.com/shorts/wapOY4KtAvg",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/43669661296"
  }
 ]
