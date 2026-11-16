@@ -263,5 +263,58 @@
   "celular": "tiktok/video-20261116-1042-5-short.mp4",
   "youtube": "https://youtube.com/shorts/SIHP_B9Mfbk",
   "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/43844817864"
+ },
+ {
+  "data": "2026-11-16T17:09:22-03:00",
+  "titulo": "Corretora, plataforma e custos: escolha certa sem erros",
+  "assunto": "Corretora, plataforma e custos para iniciantes",
+  "legenda": "Qual corretora escolher? Evite armadilhas e economize!\n\n#trade #forex #fyp",
+  "segundos": 561,
+  "formato": "longo",
+  "textos": {
+   "titulo_youtube": "Corretora, plataforma e custos: escolha certa sem erros",
+   "descricao_youtube": "Descubra o que faz uma corretora, como escolher a melhor, entender plataformas como MetaTrader, contas demo e cent, custos de swap e taxas, e os perigos das promessas fáceis. Ideal para traders iniciantes.\n\n📚 🟢 Iniciante · Aula 03: Corretora, plataforma e custos\n▶ Próxima aula: Lote, alavancagem e margem sem mistério\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#trade #forex #educacaofinanceira",
+   "legenda_tiktok": "Qual corretora escolher? Evite armadilhas e economize!",
+   "hashtags_tiktok": "#trade #forex #fyp",
+   "tags_youtube": "corretora, plataforma de trading, MetaTrader, conta demo, swap, taxas de corretagem, forex para iniciantes, como escolher corretora, custos de trading, trading education, trade do zero ao profissional, EURUSD, conta cent, promessas de lucro"
+  },
+  "aula": {
+   "indice": 2,
+   "nivel": "iniciante",
+   "numero": 3,
+   "titulo_aula": "Corretora, plataforma e custos"
+  },
+  "id": "video-20261116-1709-6",
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261116-1709-6/corretora-plataforma-e-custos-escolha-ce.mp4",
+  "capa": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261116-1709-6/corretora-plataforma-e-custos-escolha-ce-capa.jpg",
+  "youtube": "https://youtu.be/PfHpbnuR7lI",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/43945153161"
+ },
+ {
+  "data": "2026-11-16T17:09:30-03:00",
+  "titulo": "Corretora e custos: o que você precisa saber",
+  "assunto": "Corretora, plataforma e custos para iniciantes",
+  "legenda": "Qual corretora escolher? Evite armadilhas e economize!\nAula completa no YouTube: Target Go\n\n#trade #forex #fyp",
+  "segundos": 58,
+  "formato": "curto",
+  "textos": {
+   "titulo_youtube": "Corretora e custos: o que você precisa saber",
+   "descricao_youtube": "Corretora, plataforma e custos: escolha certa sem erros\n\n▶ AULA COMPLETA: https://youtu.be/PfHpbnuR7lI\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#trade #forex #educacaofinanceira #shorts",
+   "legenda_tiktok": "Qual corretora escolher? Evite armadilhas e economize!\nAula completa no YouTube: Target Go",
+   "hashtags_tiktok": "#trade #forex #fyp",
+   "tags_youtube": "corretora, plataforma de trading, MetaTrader, conta demo, swap, taxas de corretagem, forex para iniciantes, como escolher corretora, custos de trading, trading education, trade do zero ao profissional, EURUSD, conta cent, promessas de lucro"
+  },
+  "chamada_de": "video-20261116-1709-6",
+  "id": "video-20261116-1709-6-short",
+  "aula": {
+   "indice": 2,
+   "nivel": "iniciante",
+   "numero": 3,
+   "titulo_aula": "Corretora, plataforma e custos"
+  },
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261116-1709-6/corretora-plataforma-e-custos-escolha-ce-short.mp4",
+  "celular": "tiktok/video-20261116-1709-6-short.mp4",
+  "youtube": "https://youtube.com/shorts/A3jh7vnhpcc",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/43945153161"
  }
 ]
