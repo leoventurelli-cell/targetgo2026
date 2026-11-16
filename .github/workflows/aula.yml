@@ -1,10 +1,12 @@
 name: Aula do dia
 
-# Uma aula por dia, publicada às 08:00 (Brasília). O "Relógio" dispara às 07:00; os horários abaixo são reserva
-# (o agendamento do GitHub atrasa). O passo "decidir" só deixa gerar se a aula de hoje ainda não saiu.
+# Duas aulas por dia (Brasília): 08:00 educação financeira e 18:00 forex/trade.
+# O "Relógio" dispara às 07:00 e às 17:00; os horários abaixo são reserva (o agendamento do GitHub atrasa).
+# O passo "decidir" só deixa gerar se a aula daquela trilha ainda não saiu hoje.
 on:
   schedule:
-    - cron: "10,40 10-13 * * *"   # 07:10 a 10:40 Brasília (reserva)
+    - cron: "10,40 10-13 * * *"   # 07:10 a 10:40 Brasília (reserva da manhã: educação financeira)
+    - cron: "10,40 20-23 * * *"   # 17:10 a 20:40 Brasília (reserva da tarde: forex)
   workflow_dispatch:
     inputs:
       aula:
@@ -17,6 +19,10 @@ on:
         default: true
       agendado:
         description: "Uso interno do relógio: 'sim' = aula automática do dia"
+        required: false
+        default: ""
+      trilha:
+        description: "Uso interno do relógio: 'educacao' (manhã) ou 'trade' (tarde)"
         required: false
         default: ""
 
@@ -39,6 +45,7 @@ jobs:
         env:
           EVENTO: ${{ github.event_name }}
           AGENDADO: ${{ github.event.inputs.agendado }}
+          TRILHA: ${{ github.event.inputs.trilha }}
           GH_TOKEN: ${{ github.token }}
           REPO: ${{ github.repository }}
           RUN_ID: ${{ github.run_id }}
@@ -54,8 +61,9 @@ jobs:
               estado = json.load(open("docs/curso_estado.json", encoding="utf-8"))
           except Exception:
               estado = {}
-          if estado.get("ultima_data") == agora.date().isoformat():
-              print("aula de hoje já saiu"); out.write("rodar=false\n"); raise SystemExit
+          trilha = os.environ.get("TRILHA") or ("educacao" if agora.hour < 14 else "trade")
+          if estado.get(f"ultima_data_{trilha}") == agora.date().isoformat():
+              print(f"aula de hoje ({trilha}) já saiu"); out.write("rodar=false\n"); raise SystemExit
           r = subprocess.run(["gh", "run", "list", "-R", os.environ["REPO"], "--workflow", "aula.yml", "--limit", "10",
                               "--json", "databaseId,status"], capture_output=True, text=True)
           ocupado = [x for x in json.loads(r.stdout or "[]") if str(x["databaseId"]) != os.environ["RUN_ID"]
@@ -110,8 +118,10 @@ jobs:
           VELOCIDADE_VOZ: ${{ vars.VELOCIDADE_VOZ }}
           DURACAO_AULA: ${{ vars.DURACAO_AULA }}
           HORA_AULA: ${{ vars.HORA_AULA }}
+          HORA_AULA_TARDE: ${{ vars.HORA_AULA_TARDE }}
           YT_PRIVACIDADE: ${{ vars.YT_PRIVACIDADE }}
           AGENDADO: ${{ github.event.inputs.agendado }}
+          TRILHA: ${{ github.event.inputs.trilha }}
           AULA: ${{ github.event.inputs.aula }}
           SO_GERAR: ${{ github.event.inputs.publicar == 'false' }}
         run: |

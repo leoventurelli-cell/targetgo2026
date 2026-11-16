@@ -1,9 +1,10 @@
-name: Relógio (aula das 8h)
+name: Relógio (aulas 8h e 18h)
 
-# O agendamento do GitHub atrasa. Este relógio espera até 07:00 (Brasília) e dispara a "Aula do dia",
-# que fica pronta antes das 8h e é agendada no YouTube para ficar pública às 08:00.
-# Depois ele VIGIA: se até 08:15 a aula de hoje não saiu (cancelada, erro, travou), dispara de novo
-# (até 3 tentativas, vigiando até as 11:00). Ao terminar, ele mesmo agenda o próximo.
+# O agendamento do GitHub atrasa. Este relógio dispara a "Aula do dia" duas vezes (Brasília):
+#   07:00 → educação financeira, pública às 08:00
+#   17:00 → forex/trade, pública às 18:00
+# Depois ele VIGIA: se 1h15 após o disparo a aula não saiu (cancelada, erro, travou), dispara de novo
+# (até 3 tentativas, vigiando por 4h). Ao terminar, ele mesmo agenda o próximo.
 # Os "cron" abaixo só religam a corrente se ela cair.
 on:
   schedule:
@@ -34,9 +35,9 @@ jobs:
           from datetime import datetime, timedelta, timezone
           BR = timezone(timedelta(hours=-3))
           REPO = os.environ["REPO"]
-          DISPAROS = [(7, 0)]
-          CONFERIR = (8, 15)      # primeira conferência
-          ATE = (11, 0)           # para de vigiar neste horário
+          DISPAROS = [(7, 0, "educacao"), (17, 0, "trade")]
+          CONFERIR = timedelta(hours=1, minutes=15)   # primeira conferência depois do disparo
+          VIGIAR = timedelta(hours=4)                 # para de vigiar depois disso
           TENTATIVAS = 3          # novas tentativas além da primeira
 
           def gh(*a):
@@ -49,11 +50,11 @@ jobs:
                   time.sleep(20)
               return False
 
-          def aula_saiu(hoje):
+          def aula_saiu(hoje, trilha):
               r = gh("api", f"repos/{REPO}/contents/docs/curso_estado.json?ref=main", "--jq", ".content")
               try:
                   estado = json.loads(base64.b64decode(r.stdout))
-                  return estado.get("ultima_data") == hoje
+                  return estado.get(f"ultima_data_{trilha}") == hoje
               except Exception:
                   return False
 
@@ -65,9 +66,9 @@ jobs:
                   return False
 
           agora = datetime.now(BR)
-          proximos = [(agora + timedelta(days=d)).replace(hour=h, minute=m, second=0, microsecond=0)
-                      for d in (0, 1) for h, m in DISPAROS]
-          alvo = min(t for t in proximos if t > agora - timedelta(minutes=1))
+          proximos = [((agora + timedelta(days=d)).replace(hour=h, minute=m, second=0, microsecond=0), t)
+                      for d in (0, 1) for h, m, t in DISPAROS]
+          alvo, trilha = min(x for x in proximos if x[0] > agora - timedelta(minutes=1))
           espera = (alvo - agora).total_seconds()
           LIMITE = 5 * 3600 + 30 * 60
           if espera > 3600:   # longe do disparo: dorme e passa o bastão (sobra tempo para vigiar depois)
@@ -77,24 +78,24 @@ jobs:
           else:
               print(f"{agora:%H:%M} → esperando até {alvo:%d/%m %H:%M} ({espera / 60:.0f} min)")
               time.sleep(max(0, espera))
-              if disparar("aula.yml", "-f", "agendado=sim"):
-                  print("✅ aula disparada")
+              if disparar("aula.yml", "-f", "agendado=sim", "-f", f"trilha={trilha}"):
+                  print(f"✅ aula disparada ({trilha})")
 
               # ── vigia ──
               hoje = alvo.date().isoformat()
-              conferir = alvo.replace(hour=CONFERIR[0], minute=CONFERIR[1])
-              fim = alvo.replace(hour=ATE[0], minute=ATE[1])
+              conferir = alvo + CONFERIR
+              fim = alvo + VIGIAR
               time.sleep(max(0, (conferir - datetime.now(BR)).total_seconds()))
               tentativas = 0
               while datetime.now(BR) < fim:
-                  if aula_saiu(hoje):
+                  if aula_saiu(hoje, trilha):
                       print(f"{datetime.now(BR):%H:%M} ✅ aula de hoje publicada"); break
                   if aula_rodando():
                       print(f"{datetime.now(BR):%H:%M} aula ainda sendo gerada… confiro em 10 min")
                   elif tentativas < TENTATIVAS:
                       tentativas += 1
                       print(f"{datetime.now(BR):%H:%M} ⚠️ aula não saiu — tentativa extra {tentativas}/{TENTATIVAS}")
-                      disparar("aula.yml", "-f", "agendado=sim")
+                      disparar("aula.yml", "-f", "agendado=sim", "-f", f"trilha={trilha}")
                       time.sleep(120)
                   else:
                       print("❌ aula não saiu depois de todas as tentativas — ver a 'Aula do dia' no Actions"); break
