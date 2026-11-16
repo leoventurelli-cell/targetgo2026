@@ -57,7 +57,8 @@ VELOCIDADE_VOZ = _env("VELOCIDADE_VOZ", "+3%")  # quase natural: aula precisa de
 DURACAO_AULA_MINUTOS = int(_env("DURACAO_AULA", "12"))
 NOTICIA_IMPACTO_MINIMO = int(_env("NOTICIA_IMPACTO_MINIMO", "7"))  # nota de 0 a 10 para virar vídeo
 NOTICIAS_POR_DIA = int(_env("NOTICIAS_POR_DIA", "2"))
-HORA_AULA = _env("HORA_AULA", "08:00")  # horário de Brasília em que a aula fica pública no YouTube
+HORA_AULA = _env("HORA_AULA", "08:00")  # manhã: aula de educação financeira fica pública (Brasília)
+HORA_AULA_TARDE = _env("HORA_AULA_TARDE", "18:00")  # fim da tarde: aula de forex/trade fica pública
 ARQUIVO_CURSO = PASTA / "curso.json"
 
 # ───────────────────────── VÍDEO ─────────────────────────

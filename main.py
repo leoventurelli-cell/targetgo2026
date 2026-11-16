@@ -51,6 +51,15 @@ def _automatico() -> bool:
     return os.getenv("GITHUB_EVENT_NAME") == "schedule" or os.getenv("AGENDADO") == "sim"
 
 
+def _trilha() -> str:
+    """Aula automática: de manhã educação financeira, no fim da tarde forex/trade.
+    TRILHA vem do relógio; sem ela (reserva do agendamento) decide pelo horário."""
+    t = (os.getenv("TRILHA") or "").strip().lower()
+    if t in ("educacao", "trade"):
+        return t
+    return "educacao" if datetime.now(BR).hour < 14 else "trade"
+
+
 def _legenda(r: dict) -> str:
     return f"{r.get('legenda_tiktok') or r['titulo']}\n\n{' '.join(r.get('hashtags_tiktok') or r.get('hashtags', []))}".strip()
 
@@ -127,11 +136,16 @@ def _youtube(arquivo, r: dict, formato: str, capa=None, playlist: str | list | N
 
 
 # ───────────────────────── aulas ─────────────────────────
-def _proxima_aula(curso: dict, feitas: list[int]) -> int | None:
-    """2 aulas de trade, 1 de educação financeira, e assim por diante (enquanto houver nas duas trilhas)."""
+def _proxima_aula(curso: dict, feitas: list[int], trilha: str | None = None) -> int | None:
+    """Com trilha: a próxima aula daquela trilha (se ela acabou, a da outra).
+    Sem trilha (pedido manual): 2 aulas de trade, 1 de educação financeira, e assim por diante."""
     aulas = curso["aulas"]
     trade = [i for i, a in enumerate(aulas) if a["nivel"] != "educacao" and i not in feitas]
     edu = [i for i, a in enumerate(aulas) if a["nivel"] == "educacao" and i not in feitas]
+    if trilha == "educacao":
+        return (edu or trade or [None])[0]
+    if trilha == "trade":
+        return (trade or edu or [None])[0]
     if len(feitas) % 3 == 2 and edu:
         return edu[0]
     return (trade or edu or [None])[0]
@@ -143,10 +157,11 @@ def fazer_aula(indice: int | None, publicar: bool):
         raise SystemExit("::error::curso.json não encontrado ou inválido.")
     estado = _ler(ESTADO, {"feitas": []})
     hoje = datetime.now(BR).date().isoformat()
-    if _automatico() and estado.get("ultima_data") == hoje:
-        print("⏭️  A aula de hoje já saiu.")
+    trilha = _trilha() if _automatico() else None
+    if trilha and estado.get(f"ultima_data_{trilha}") == hoje:
+        print(f"⏭️  A aula de {'educação financeira' if trilha == 'educacao' else 'forex'} de hoje já saiu.")
         return
-    i = indice if indice is not None else _proxima_aula(curso, estado["feitas"])
+    i = indice if indice is not None else _proxima_aula(curso, estado["feitas"], trilha)
     if i is None:
         print("🎓 Todas as aulas da grade já saíram! Acrescente novas aulas em curso.json.")
         return
@@ -193,8 +208,9 @@ def fazer_aula(indice: int | None, publicar: bool):
     for lixo in list(pasta.glob("clipe_*")) + list(pasta.glob("cena_*.mp4")) + list(pasta.glob("grafico_*")):
         lixo.unlink(missing_ok=True)
 
-    if publicar and _automatico() and config.YT_PRIVACIDADE == "public":  # fica pública exatamente às 8h
-        h, mi = (int(x) for x in config.HORA_AULA.split(":"))
+    if publicar and _automatico() and config.YT_PRIVACIDADE == "public":  # fica pública exatamente no horário
+        hora = config.HORA_AULA_TARDE if trilha == "trade" else config.HORA_AULA
+        h, mi = (int(x) for x in hora.split(":"))
         alvo = datetime.now(BR).replace(hour=h, minute=mi, second=0, microsecond=0)
         if alvo > datetime.now(BR) + timedelta(minutes=3):
             r["publicar_em"] = alvo.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
@@ -227,6 +243,7 @@ def fazer_aula(indice: int | None, publicar: bool):
         if i not in estado["feitas"]:
             estado["feitas"].append(i)
         estado["ultima_data"] = hoje
+        estado[f"ultima_data_{'educacao' if aula['nivel'] == 'educacao' else 'trade'}"] = hoje
         estado["ultima_aula"] = aula["titulo"]
         _gravar(ESTADO, estado)
 
