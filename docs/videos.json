@@ -210,5 +210,58 @@
   "celular": "tiktok/video-20261116-0344-6.mp4",
   "youtube": "https://youtube.com/shorts/nMMMS8aTQLQ",
   "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/43818649321"
+ },
+ {
+  "data": "2026-11-16T10:42:18-03:00",
+  "titulo": "O que é a taxa Selic e como ela afeta seu bolso?",
+  "assunto": "Taxa Selic e seu impacto no dia a dia",
+  "legenda": "A Selic mexe com tudo que você paga. Quer saber como?\n\n#trade #forex #fyp",
+  "segundos": 500,
+  "formato": "longo",
+  "textos": {
+   "titulo_youtube": "O que é a taxa Selic e como ela afeta seu bolso?",
+   "descricao_youtube": "Entenda a Selic, quem decide, sua frequência e como ela chega nos juros do cartão, financiamento, poupança e investimentos. Aprenda com exemplos práticos e evite erros comuns. #taxaSelic #educacaofinanceira #trade\n\n📚 🔵 Educação Financeira · Aula 01: O que é a taxa Selic e por que ela mexe com a sua vida\n▶ Próxima aula: Juros: o preço do dinheiro\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#trade #forex #educacaofinanceira",
+   "legenda_tiktok": "A Selic mexe com tudo que você paga. Quer saber como?",
+   "hashtags_tiktok": "#trade #forex #fyp",
+   "tags_youtube": "taxa selic, câmbio, juros do cartão, financiamento, poupança, investimentos, educação financeira, copom, banco central, euro dólar, exemplo prático, erro comum, mercado de capitais, renda fixa, como funciona a selic"
+  },
+  "aula": {
+   "indice": 34,
+   "nivel": "educacao",
+   "numero": 1,
+   "titulo_aula": "O que é a taxa Selic e por que ela mexe com a sua vida"
+  },
+  "id": "video-20261116-1042-5",
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261116-1042-5/o-que-e-a-taxa-selic-e-como-ela-afeta-se.mp4",
+  "capa": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261116-1042-5/o-que-e-a-taxa-selic-e-como-ela-afeta-se-capa.jpg",
+  "youtube": "https://youtu.be/0sOaboPuLAw",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/43844817864"
+ },
+ {
+  "data": "2026-11-16T10:42:25-03:00",
+  "titulo": "Selic: Por que você sente na carteira?",
+  "assunto": "Taxa Selic e seu impacto no dia a dia",
+  "legenda": "A Selic mexe com tudo que você paga. Quer saber como?\nAula completa no YouTube: Target Go\n\n#trade #forex #fyp",
+  "segundos": 58,
+  "formato": "curto",
+  "textos": {
+   "titulo_youtube": "Selic: Por que você sente na carteira?",
+   "descricao_youtube": "O que é a taxa Selic e como ela afeta seu bolso?\n\n▶ AULA COMPLETA: https://youtu.be/0sOaboPuLAw\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#trade #forex #educacaofinanceira #shorts",
+   "legenda_tiktok": "A Selic mexe com tudo que você paga. Quer saber como?\nAula completa no YouTube: Target Go",
+   "hashtags_tiktok": "#trade #forex #fyp",
+   "tags_youtube": "taxa selic, câmbio, juros do cartão, financiamento, poupança, investimentos, educação financeira, copom, banco central, euro dólar, exemplo prático, erro comum, mercado de capitais, renda fixa, como funciona a selic"
+  },
+  "chamada_de": "video-20261116-1042-5",
+  "id": "video-20261116-1042-5-short",
+  "aula": {
+   "indice": 34,
+   "nivel": "educacao",
+   "numero": 1,
+   "titulo_aula": "O que é a taxa Selic e por que ela mexe com a sua vida"
+  },
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261116-1042-5/o-que-e-a-taxa-selic-e-como-ela-afeta-se-short.mp4",
+  "celular": "tiktok/video-20261116-1042-5-short.mp4",
+  "youtube": "https://youtube.com/shorts/SIHP_B9Mfbk",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/43844817864"
  }
 ]
