@@ -447,5 +447,58 @@
   "celular": "tiktok/video-20261117-0708-9-short.mp4",
   "youtube": "https://youtube.com/shorts/5-zGQiuEjrk",
   "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44060703127"
+ },
+ {
+  "data": "2026-11-17T16:21:49-03:00",
+  "titulo": "Lote, Alavancagem e Margem Sem Mistério – Comece a Tradear",
+  "assunto": "Lote, alavancagem e margem no trading",
+  "legenda": "Já confundiu lote e alavancagem? Descubra como evitar o stop‑out!\n\n#trade #forex #fyp",
+  "segundos": 601,
+  "formato": "longo",
+  "textos": {
+   "titulo_youtube": "Lote, Alavancagem e Margem Sem Mistério – Comece a Tradear",
+   "descricao_youtube": "Nesta aula você aprende a diferença entre lote padrão, mini e micro, calcula o valor do pip, entende alavancagem, margem e stop‑out. Exemplos práticos com euro‑dólar e ouro. Evite erros que podem fechar sua conta. Palavras‑chave: lote, alavancagem, margem, risco, trade iniciante.\n\n📚 🟢 Iniciante · Aula 04: Lote, alavancagem e margem sem mistério\n▶ Próxima aula: Como ler um gráfico: tempo gráfico e candles\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#trade #forex #educacaofinanceira",
+   "legenda_tiktok": "Já confundiu lote e alavancagem? Descubra como evitar o stop‑out!",
+   "hashtags_tiktok": "#trade #forex #fyp",
+   "tags_youtube": "lote, alavancagem, margin trading, forex, trading para iniciantes, curso de trade, eurusd, ouro, micro lote, mini lote, stop loss, risk management, educação financeira, target go, trading Brasil"
+  },
+  "aula": {
+   "indice": 3,
+   "nivel": "iniciante",
+   "numero": 4,
+   "titulo_aula": "Lote, alavancagem e margem sem mistério"
+  },
+  "id": "video-20261117-1621-10",
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261117-1621-10/lote-alavancagem-e-margem-sem-misterio-c.mp4",
+  "capa": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261117-1621-10/lote-alavancagem-e-margem-sem-misterio-c-capa.jpg",
+  "youtube": "https://youtu.be/0smagbSv6XY",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44155586076"
+ },
+ {
+  "data": "2026-11-17T16:21:59-03:00",
+  "titulo": "Lote, Alavancagem e Margem Explicados",
+  "assunto": "Lote, alavancagem e margem no trading",
+  "legenda": "Já confundiu lote e alavancagem? Descubra como evitar o stop‑out!\nAula completa no YouTube: Target Go\n\n#trade #forex #fyp",
+  "segundos": 58,
+  "formato": "curto",
+  "textos": {
+   "titulo_youtube": "Lote, Alavancagem e Margem Explicados",
+   "descricao_youtube": "Lote, Alavancagem e Margem Sem Mistério – Comece a Tradear\n\n▶ AULA COMPLETA: https://youtu.be/0smagbSv6XY\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#trade #forex #educacaofinanceira #shorts",
+   "legenda_tiktok": "Já confundiu lote e alavancagem? Descubra como evitar o stop‑out!\nAula completa no YouTube: Target Go",
+   "hashtags_tiktok": "#trade #forex #fyp",
+   "tags_youtube": "lote, alavancagem, margin trading, forex, trading para iniciantes, curso de trade, eurusd, ouro, micro lote, mini lote, stop loss, risk management, educação financeira, target go, trading Brasil"
+  },
+  "chamada_de": "video-20261117-1621-10",
+  "id": "video-20261117-1621-10-short",
+  "aula": {
+   "indice": 3,
+   "nivel": "iniciante",
+   "numero": 4,
+   "titulo_aula": "Lote, alavancagem e margem sem mistério"
+  },
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261117-1621-10/lote-alavancagem-e-margem-sem-misterio-c-short.mp4",
+  "celular": "tiktok/video-20261117-1621-10-short.mp4",
+  "youtube": "https://youtube.com/shorts/keD1EvK7FDY",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44155586076"
  }
 ]
