@@ -394,5 +394,58 @@
   "celular": "tiktok/video-20261117-0504-9.mp4",
   "youtube": "https://youtube.com/shorts/PgYT8HryMNY",
   "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44043341703"
+ },
+ {
+  "data": "2026-11-17T07:08:46-03:00",
+  "titulo": "Juros: Por que mudam seu bolso? Entenda o preço do dinheiro",
+  "assunto": "Juros: o preço do dinheiro",
+  "legenda": "Você sabe por que o juros pode mudar seu bolso? Descubra agora!\n\n#trade #forex #fyp",
+  "segundos": 605,
+  "formato": "longo",
+  "textos": {
+   "titulo_youtube": "Juros: Por que mudam seu bolso? Entenda o preço do dinheiro",
+   "descricao_youtube": "Nesta aula você vai descobrir o que são juros, como eles são calculados e por que são diferentes para quem paga e quem recebe. Aprenda a converter taxas mensais e anuais, entenda o CET e veja exemplos práticos com o par euro‑dólar. Use o conteúdo para melhorar suas decisões de investimento e evitar armadilhas que drenam seu capital. Palavras‑chave: juros simples, juros compostos, taxa mensal, taxa anual, CET, euro‑dólar, trade, educação financeira.\n\n📚 🔵 Educação Financeira · Aula 02: Juros: o preço do dinheiro\n▶ Próxima aula: Inflação: por que o seu dinheiro compra cada vez menos\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#trade #forex #educacaofinanceira",
+   "legenda_tiktok": "Você sabe por que o juros pode mudar seu bolso? Descubra agora!",
+   "hashtags_tiktok": "#trade #forex #fyp",
+   "tags_youtube": "juros, taxa de juros, CET, educação financeira, trade, forex, euro-dólar, investimento, finanças pessoais, cálculo de juros, taxa mensal, taxa anual, inflação, selic, câmbio"
+  },
+  "aula": {
+   "indice": 35,
+   "nivel": "educacao",
+   "numero": 2,
+   "titulo_aula": "Juros: o preço do dinheiro"
+  },
+  "id": "video-20261117-0708-9",
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261117-0708-9/juros-por-que-mudam-seu-bolso-entenda-o.mp4",
+  "capa": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261117-0708-9/juros-por-que-mudam-seu-bolso-entenda-o-capa.jpg",
+  "youtube": "https://youtu.be/CUeecCutuDw",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44060703127"
+ },
+ {
+  "data": "2026-11-17T07:08:53-03:00",
+  "titulo": "Juros: Por que mudam seu bolso?",
+  "assunto": "Juros: o preço do dinheiro",
+  "legenda": "Você sabe por que o juros pode mudar seu bolso? Descubra agora!\nAula completa no YouTube: Target Go\n\n#trade #forex #fyp",
+  "segundos": 58,
+  "formato": "curto",
+  "textos": {
+   "titulo_youtube": "Juros: Por que mudam seu bolso?",
+   "descricao_youtube": "Juros: Por que mudam seu bolso? Entenda o preço do dinheiro\n\n▶ AULA COMPLETA: https://youtu.be/CUeecCutuDw\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#trade #forex #educacaofinanceira #shorts",
+   "legenda_tiktok": "Você sabe por que o juros pode mudar seu bolso? Descubra agora!\nAula completa no YouTube: Target Go",
+   "hashtags_tiktok": "#trade #forex #fyp",
+   "tags_youtube": "juros, taxa de juros, CET, educação financeira, trade, forex, euro-dólar, investimento, finanças pessoais, cálculo de juros, taxa mensal, taxa anual, inflação, selic, câmbio"
+  },
+  "chamada_de": "video-20261117-0708-9",
+  "id": "video-20261117-0708-9-short",
+  "aula": {
+   "indice": 35,
+   "nivel": "educacao",
+   "numero": 2,
+   "titulo_aula": "Juros: o preço do dinheiro"
+  },
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261117-0708-9/juros-por-que-mudam-seu-bolso-entenda-o-short.mp4",
+  "celular": "tiktok/video-20261117-0708-9-short.mp4",
+  "youtube": "https://youtube.com/shorts/5-zGQiuEjrk",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44060703127"
  }
 ]
