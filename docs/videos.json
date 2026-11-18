@@ -526,5 +526,58 @@
   "celular": "tiktok/video-20261118-0452-12.mp4",
   "youtube": "https://youtube.com/shorts/Lto1x42IJ6M",
   "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44260492125"
+ },
+ {
+  "data": "2026-11-18T07:10:42-03:00",
+  "titulo": "Inflação: Por que seu dinheiro compra menos? Entenda o IPCA e como se proteger",
+  "assunto": "Inflação e poder de compra",
+  "legenda": "Você sabe por que R$ 1.000 hoje compra menos que ontem? Descubra a resposta e como proteger seu dinheiro!\n\n#trade #forex #fyp",
+  "segundos": 511,
+  "formato": "longo",
+  "textos": {
+   "titulo_youtube": "Inflação: Por que seu dinheiro compra menos? Entenda o IPCA e como se proteger",
+   "descricao_youtube": "Nesta aula do Target Go você vai entender o que é inflação, como o IPCA mede a variação dos preços, as causas e a meta do Banco Central, além de estratégias práticas para proteger seu poder de compra. Use exemplos reais, como o euro‑dólar, e descubra como aplicar o conhecimento no seu dia a dia. Palavras‑chave: inflação, IPCA, meta de inflação, proteção de patrimônio, trade.\n\n📚 🔵 Educação Financeira · Aula 03: Inflação: por que o seu dinheiro compra cada vez menos\n▶ Próxima aula: Selic e inflação juntas: como o Banco Central controla os preços\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#trade #forex #educacaofinanceira",
+   "legenda_tiktok": "Você sabe por que R$ 1.000 hoje compra menos que ontem? Descubra a resposta e como proteger seu dinheiro!",
+   "hashtags_tiktok": "#trade #forex #fyp",
+   "tags_youtube": "inflação, IPCA, meta de inflação, proteção patrimonial, euro-dólar, target go, educação financeira, trading para iniciantes, como funciona a inflação, bolsa de valores, mercado financeiro"
+  },
+  "aula": {
+   "indice": 36,
+   "nivel": "educacao",
+   "numero": 3,
+   "titulo_aula": "Inflação: por que o seu dinheiro compra cada vez menos"
+  },
+  "id": "video-20261118-0710-13",
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261118-0710-13/inflacao-por-que-seu-dinheiro-compra-men.mp4",
+  "capa": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261118-0710-13/inflacao-por-que-seu-dinheiro-compra-men-capa.jpg",
+  "youtube": "https://youtu.be/ukanNH_a-VM",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44281143219"
+ },
+ {
+  "data": "2026-11-18T07:10:51-03:00",
+  "titulo": "Inflação: por que seu dinheiro perde valor?",
+  "assunto": "Inflação e poder de compra",
+  "legenda": "Você sabe por que R$ 1.000 hoje compra menos que ontem? Descubra a resposta e como proteger seu dinheiro!\nAula completa no YouTube: Target Go\n\n#trade #forex #fyp",
+  "segundos": 58,
+  "formato": "curto",
+  "textos": {
+   "titulo_youtube": "Inflação: por que seu dinheiro perde valor?",
+   "descricao_youtube": "Inflação: Por que seu dinheiro compra menos? Entenda o IPCA e como se proteger\n\n▶ AULA COMPLETA: https://youtu.be/ukanNH_a-VM\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#trade #forex #educacaofinanceira #shorts",
+   "legenda_tiktok": "Você sabe por que R$ 1.000 hoje compra menos que ontem? Descubra a resposta e como proteger seu dinheiro!\nAula completa no YouTube: Target Go",
+   "hashtags_tiktok": "#trade #forex #fyp",
+   "tags_youtube": "inflação, IPCA, meta de inflação, proteção patrimonial, euro-dólar, target go, educação financeira, trading para iniciantes, como funciona a inflação, bolsa de valores, mercado financeiro"
+  },
+  "chamada_de": "video-20261118-0710-13",
+  "id": "video-20261118-0710-13-short",
+  "aula": {
+   "indice": 36,
+   "nivel": "educacao",
+   "numero": 3,
+   "titulo_aula": "Inflação: por que o seu dinheiro compra cada vez menos"
+  },
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261118-0710-13/inflacao-por-que-seu-dinheiro-compra-men-short.mp4",
+  "celular": "tiktok/video-20261118-0710-13-short.mp4",
+  "youtube": "https://youtube.com/shorts/hhjVv79sq3Y",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44281143219"
  }
 ]
