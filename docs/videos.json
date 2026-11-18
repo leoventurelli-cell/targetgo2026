@@ -579,5 +579,31 @@
   "celular": "tiktok/video-20261118-0710-13-short.mp4",
   "youtube": "https://youtube.com/shorts/hhjVv79sq3Y",
   "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44281143219"
+ },
+ {
+  "data": "2026-11-18T15:57:16-03:00",
+  "titulo": "Fed Barr indica novos aumentos de juros: veja o que muda",
+  "assunto": "Fed pode subir juros, impacto no dólar, ações e ouro",
+  "legenda": "Será que o dólar vai subir ainda mais?\n\n#mercadofinanceiro #forex #fyp",
+  "segundos": 74,
+  "formato": "curto",
+  "textos": {
+   "titulo_youtube": "Fed Barr indica novos aumentos de juros: veja o que muda",
+   "descricao_youtube": "Conselheiro do Fed, Christopher Barr, indicou a possibilidade de novos aumentos de juros, conforme divulgado pelo Rock Hill Herald em 18/11/2026 e reforçado por Reuters e Investing.com Brasil. O índice DXY subiu 0,56% no período, enquanto o S&P 500 e o ouro registraram quedas de 3,26% e 4,26%, respectivamente, o que pode gerar pressão sobre ativos de risco e a moeda brasileira.\n\n📰 Fonte: Rock Hill Herald – https://news.google.com/rss/articles/CBMigwFBVV95cUxNMFdSZWNIWUhFRGYydEpPRmNmbHVDeFV2Smc4REFRclRKenZvSEcycG9mb3BuV3RTNGR1N256NFoweU11dDlGM3BTcmhoT0VUVDNwMFZHUkRMVjZIOEpEa1VNUzRJVHR3WkRkR2tJbHNmRkF0anJrd1drdXhkWXkwVUwwTQ?oc=5\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#mercadofinanceiro #forex #noticias #shorts",
+   "legenda_tiktok": "Será que o dólar vai subir ainda mais?",
+   "hashtags_tiktok": "#mercadofinanceiro #forex #fyp",
+   "tags_youtube": "Fed, Juros, Dólar, S&P500, Ouro, Mercado, Investimento, Análise, Economia, Notícias, Taxas, TargetGo"
+  },
+  "noticia": {
+   "manchete": "Fed's Barr says rate rises likely lie ahead for economy",
+   "fonte": "Rock Hill Herald",
+   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNMFdSZWNIWUhFRGYydEpPRmNmbHVDeFV2Smc4REFRclRKenZvSEcycG9mb3BuV3RTNGR1N256NFoweU11dDlGM3BTcmhoT0VUVDNwMFZHUkRMVjZIOEpEa1VNUzRJVHR3WkRkR2tJbHNmRkF0anJrd1drdXhkWXkwVUwwTQ?oc=5",
+   "impacto": 8.0
+  },
+  "id": "video-20261118-1557-13",
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261118-1557-13/fed-barr-indica-novos-aumentos-de-juros.mp4",
+  "celular": "tiktok/video-20261118-1557-13.mp4",
+  "youtube": "https://youtube.com/shorts/sdeAPb_KcyU",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44374512467"
  }
 ]
