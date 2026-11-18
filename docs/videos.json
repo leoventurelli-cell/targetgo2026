@@ -500,5 +500,31 @@
   "celular": "tiktok/video-20261117-1621-10-short.mp4",
   "youtube": "https://youtube.com/shorts/keD1EvK7FDY",
   "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44155586076"
+ },
+ {
+  "data": "2026-11-18T04:52:43-03:00",
+  "titulo": "Inflação 3,6% eleva dólar e pressiona ouro",
+  "assunto": "Inflação alta e dólar em alta",
+  "legenda": "Inflação alta, o que muda seu dinheiro?\n\n#mercadofinanceiro #forex #fyp",
+  "segundos": 75,
+  "formato": "curto",
+  "textos": {
+   "titulo_youtube": "Inflação 3,6% eleva dólar e pressiona ouro",
+   "descricao_youtube": "A inflação dos EUA subiu para 3,6% em 18/11/2026, impulsionando o dólar para 103,74 e derrubando o ouro para 3767,7. Fonte: AOL.co.uk. Dados de DXY, EUR/USD e XAU/USD confirmam a reação dos mercados.\n\n📰 Fonte: AOL.co.uk – https://news.google.com/rss/articles/CBMieEFVX3lxTE1iLUdXa3pma3VnYkZ6eU51SlZGM3UydHdwS1J2SGh6U0NOOGNpNXotMlZrZmFrbmRTeTZnRmZ0X0RCY2VFRlkyZzJ4N2JHeGl6R1VYSnBONGJqcVRTSmdLVnpXQ1ZCRF9TZFREYzU0YWpRSjE0TW5qZQ?oc=5\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#mercadofinanceiro #forex #noticias #shorts",
+   "legenda_tiktok": "Inflação alta, o que muda seu dinheiro?",
+   "hashtags_tiktok": "#mercadofinanceiro #forex #fyp",
+   "tags_youtube": "inflação, dólar, ouro, mercado, investimento, forex, taxas de juros, Fed, USD, real, ações, cripto"
+  },
+  "noticia": {
+   "manchete": "Inflation rose to 3.6% last month - what it means for you and your money",
+   "fonte": "AOL.co.uk",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1iLUdXa3pma3VnYkZ6eU51SlZGM3UydHdwS1J2SGh6U0NOOGNpNXotMlZrZmFrbmRTeTZnRmZ0X0RCY2VFRlkyZzJ4N2JHeGl6R1VYSnBONGJqcVRTSmdLVnpXQ1ZCRF9TZFREYzU0YWpRSjE0TW5qZQ?oc=5",
+   "impacto": 8.0
+  },
+  "id": "video-20261118-0452-12",
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261118-0452-12/inflacao-3-6-eleva-dolar-e-pressiona-our.mp4",
+  "celular": "tiktok/video-20261118-0452-12.mp4",
+  "youtube": "https://youtube.com/shorts/Lto1x42IJ6M",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44260492125"
  }
 ]
