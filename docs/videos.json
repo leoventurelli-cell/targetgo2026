@@ -605,5 +605,58 @@
   "celular": "tiktok/video-20261118-1557-13.mp4",
   "youtube": "https://youtube.com/shorts/sdeAPb_KcyU",
   "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44374512467"
+ },
+ {
+  "data": "2026-11-18T17:09:30-03:00",
+  "titulo": "Como ler gráficos de candles: tempos M5, H1, H4 e diário explicados",
+  "assunto": "Como ler um gráfico: tempo gráfico e candles",
+  "legenda": "Você sabe o que cada vela realmente mostra? Descubra como ler candles e escolher o tempo certo!\n\n#trade #forex #fyp",
+  "segundos": 505,
+  "formato": "longo",
+  "textos": {
+   "titulo_youtube": "Como ler gráficos de candles: tempos M5, H1, H4 e diário explicados",
+   "descricao_youtube": "Aprenda a ler gráficos de linha, barras e candles. Entenda abertura, fechamento, máxima, mínima, candles de alta e baixa. Descubra quando usar M5, H1, H4 ou diário. Exemplos práticos com euro-dólar. Conteúdo essencial para iniciantes no trade.\n\n📚 🟢 Iniciante · Aula 05: Como ler um gráfico: tempo gráfico e candles\n▶ Próxima aula: Tendência de alta, de baixa e lateral\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#trade #forex #educacaofinanceira",
+   "legenda_tiktok": "Você sabe o que cada vela realmente mostra? Descubra como ler candles e escolher o tempo certo!",
+   "hashtags_tiktok": "#trade #forex #fyp",
+   "tags_youtube": "trade, forex, gráficos, candles, tempo gráfico, M5, H1, H4, diário, euro dólar, análise técnica, iniciante, curso de trade, educação financeira, como ler gráficos, tendência"
+  },
+  "aula": {
+   "indice": 4,
+   "nivel": "iniciante",
+   "numero": 5,
+   "titulo_aula": "Como ler um gráfico: tempo gráfico e candles"
+  },
+  "id": "video-20261118-1709-15",
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261118-1709-15/como-ler-graficos-de-candles-tempos-m5-h.mp4",
+  "capa": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261118-1709-15/como-ler-graficos-de-candles-tempos-m5-h-capa.jpg",
+  "youtube": "https://youtu.be/qMjEWnNI_tA",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44386313990"
+ },
+ {
+  "data": "2026-11-18T17:09:37-03:00",
+  "titulo": "Domine candles e tempos gráficos",
+  "assunto": "Como ler um gráfico: tempo gráfico e candles",
+  "legenda": "Você sabe o que cada vela realmente mostra? Descubra como ler candles e escolher o tempo certo!\nAula completa no YouTube: Target Go\n\n#trade #forex #fyp",
+  "segundos": 58,
+  "formato": "curto",
+  "textos": {
+   "titulo_youtube": "Domine candles e tempos gráficos",
+   "descricao_youtube": "Como ler gráficos de candles: tempos M5, H1, H4 e diário explicados\n\n▶ AULA COMPLETA: https://youtu.be/qMjEWnNI_tA\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#trade #forex #educacaofinanceira #shorts",
+   "legenda_tiktok": "Você sabe o que cada vela realmente mostra? Descubra como ler candles e escolher o tempo certo!\nAula completa no YouTube: Target Go",
+   "hashtags_tiktok": "#trade #forex #fyp",
+   "tags_youtube": "trade, forex, gráficos, candles, tempo gráfico, M5, H1, H4, diário, euro dólar, análise técnica, iniciante, curso de trade, educação financeira, como ler gráficos, tendência"
+  },
+  "chamada_de": "video-20261118-1709-15",
+  "id": "video-20261118-1709-15-short",
+  "aula": {
+   "indice": 4,
+   "nivel": "iniciante",
+   "numero": 5,
+   "titulo_aula": "Como ler um gráfico: tempo gráfico e candles"
+  },
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261118-1709-15/como-ler-graficos-de-candles-tempos-m5-h-short.mp4",
+  "celular": "tiktok/video-20261118-1709-15-short.mp4",
+  "youtube": "https://youtube.com/shorts/f3W4r9ejE0w",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44386313990"
  }
 ]
