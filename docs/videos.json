@@ -658,5 +658,31 @@
   "celular": "tiktok/video-20261118-1709-15-short.mp4",
   "youtube": "https://youtube.com/shorts/f3W4r9ejE0w",
   "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44386313990"
+ },
+ {
+  "data": "2026-11-19T04:36:43-03:00",
+  "titulo": "Fed dividido: risco de alta nos juros mexe no dólar e ações",
+  "assunto": "Fed dividido e impacto nos mercados",
+  "legenda": "Fed pode subir juros de novo?\n\n#mercadofinanceiro #forex #fyp",
+  "segundos": 75,
+  "formato": "curto",
+  "textos": {
+   "titulo_youtube": "Fed dividido: risco de alta nos juros mexe no dólar e ações",
+   "descricao_youtube": "As atas do Fed de 19/11/2026 mostram divergência sobre pausa ou alta dos juros, impulsionando o dólar (+0,37%) e pressionando o S&P 500 (-3,61%). Fonte: Cointelegraph Brasil.\n\n📰 Fonte: Cointelegraph Brasil – https://news.google.com/rss/articles/CBMioAFBVV95cUxQb3BRX1JtNmhTYjB2Rm1lRHZqOEx0TGVUVXBhMmFtZmhyOXd4dHhac0I4SFdYOTMtTWdqZmNvYlgwaS1EU2lFTmlHMzZoM2xaOFNZQjdUU254dzFJcnNYZFh1U3REaUZUWWlMWHpLMnlwNjB1bkVQdmtPaGYyZW9yVnNDd19UbnpYY19vQjhuWTBxUVRYUjBIZ2RFanY3NDgw?oc=5\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#mercadofinanceiro #forex #noticias #shorts",
+   "legenda_tiktok": "Fed pode subir juros de novo?",
+   "hashtags_tiktok": "#mercadofinanceiro #forex #fyp",
+   "tags_youtube": "Fed, juros, dólar, mercado, investimento, ações, commodities, real, cripto, forex, S&P500, economia"
+  },
+  "noticia": {
+   "manchete": "Atas do Fed revelam divisão sobre manter os juros em outubro",
+   "fonte": "Cointelegraph Brasil",
+   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQb3BRX1JtNmhTYjB2Rm1lRHZqOEx0TGVUVXBhMmFtZmhyOXd4dHhac0I4SFdYOTMtTWdqZmNvYlgwaS1EU2lFTmlHMzZoM2xaOFNZQjdUU254dzFJcnNYZFh1U3REaUZUWWlMWHpLMnlwNjB1bkVQdmtPaGYyZW9yVnNDd19UbnpYY19vQjhuWTBxUVRYUjBIZ2RFanY3NDgw?oc=5",
+   "impacto": 8.0
+  },
+  "id": "video-20261119-0436-15",
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261119-0436-15/fed-dividido-risco-de-alta-nos-juros-mex.mp4",
+  "celular": "tiktok/video-20261119-0436-15.mp4",
+  "youtube": "https://youtube.com/shorts/0rqr1HjvtTI",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44480624309"
  }
 ]
