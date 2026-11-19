@@ -684,5 +684,58 @@
   "celular": "tiktok/video-20261119-0436-15.mp4",
   "youtube": "https://youtube.com/shorts/0rqr1HjvtTI",
   "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44480624309"
+ },
+ {
+  "data": "2026-11-19T07:07:45-03:00",
+  "titulo": "Por que o BC sobe juros quando a inflação aumenta? Entenda o juro real",
+  "assunto": "Selic e inflação",
+  "legenda": "Quando a inflação sobe, o Banco Central aumenta a Selic. Você sabe por quê? Descubra e teste o cálculo do juro real!\n\n#educacaofinanceira #dicasfinancieras #fyp",
+  "segundos": 338,
+  "formato": "longo",
+  "textos": {
+   "titulo_youtube": "Por que o BC sobe juros quando a inflação aumenta? Entenda o juro real",
+   "descricao_youtube": "Nesta aula você aprende por que o Banco Central eleva a taxa Selic quando a inflação dispara, como calcular o juro real, e quais são os impactos na economia, no dólar e na bolsa. Inclui exemplos práticos, erros comuns e exercício para aplicar o conhecimento. Ideal para traders e investidores que buscam entender a política monetária.\n\n📚 🔵 Educação Financeira · Aula 04: Selic e inflação juntas: como o Banco Central controla os preços\n▶ Próxima aula: Juros compostos: a força que trabalha a favor ou contra você\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#educacaofinanceira #selic #inflacao #juros",
+   "legenda_tiktok": "Quando a inflação sobe, o Banco Central aumenta a Selic. Você sabe por quê? Descubra e teste o cálculo do juro real!",
+   "hashtags_tiktok": "#educacaofinanceira #dicasfinancieras #fyp",
+   "tags_youtube": "selic, inflação, juro real, Banco Central, política monetária, dólar, bolsa de valores, economia brasileira, educação financeira, taxa de juros, câmbio, índice de preços"
+  },
+  "aula": {
+   "indice": 37,
+   "nivel": "educacao",
+   "numero": 4,
+   "titulo_aula": "Selic e inflação juntas: como o Banco Central controla os preços"
+  },
+  "id": "video-20261119-0707-17",
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261119-0707-17/por-que-o-bc-sobe-juros-quando-a-inflaca.mp4",
+  "capa": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261119-0707-17/por-que-o-bc-sobe-juros-quando-a-inflaca-capa.jpg",
+  "youtube": "https://youtu.be/7bv_jr6N8vU",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44501509241"
+ },
+ {
+  "data": "2026-11-19T07:07:55-03:00",
+  "titulo": "BC, Selic e inflação: o que acontece?",
+  "assunto": "Selic e inflação",
+  "legenda": "Quando a inflação sobe, o Banco Central aumenta a Selic. Você sabe por quê? Descubra e teste o cálculo do juro real!\nAula completa no YouTube: Target Go\n\n#educacaofinanceira #dicasfinancieras #fyp",
+  "segundos": 58,
+  "formato": "curto",
+  "textos": {
+   "titulo_youtube": "BC, Selic e inflação: o que acontece?",
+   "descricao_youtube": "Por que o BC sobe juros quando a inflação aumenta? Entenda o juro real\n\n▶ AULA COMPLETA: https://youtu.be/7bv_jr6N8vU\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#educacaofinanceira #selic #inflacao #juros #shorts",
+   "legenda_tiktok": "Quando a inflação sobe, o Banco Central aumenta a Selic. Você sabe por quê? Descubra e teste o cálculo do juro real!\nAula completa no YouTube: Target Go",
+   "hashtags_tiktok": "#educacaofinanceira #dicasfinancieras #fyp",
+   "tags_youtube": "selic, inflação, juro real, Banco Central, política monetária, dólar, bolsa de valores, economia brasileira, educação financeira, taxa de juros, câmbio, índice de preços"
+  },
+  "chamada_de": "video-20261119-0707-17",
+  "id": "video-20261119-0707-17-short",
+  "aula": {
+   "indice": 37,
+   "nivel": "educacao",
+   "numero": 4,
+   "titulo_aula": "Selic e inflação juntas: como o Banco Central controla os preços"
+  },
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261119-0707-17/por-que-o-bc-sobe-juros-quando-a-inflaca-short.mp4",
+  "celular": "tiktok/video-20261119-0707-17-short.mp4",
+  "youtube": "https://youtube.com/shorts/8fLLFJXCMME",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44501509241"
  }
 ]
