@@ -737,5 +737,58 @@
   "celular": "tiktok/video-20261119-0707-17-short.mp4",
   "youtube": "https://youtube.com/shorts/8fLLFJXCMME",
   "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44501509241"
+ },
+ {
+  "data": "2026-11-19T16:09:32-03:00",
+  "titulo": "Como Identificar Tendência de Alta, Baixa e Lateral – Evite Erros Comuns",
+  "assunto": "Tendência de alta, baixa e lateral",
+  "legenda": "Você sabe diferenciar uma tendência de alta de uma lateral? Descubra agora!\n\n#trade #forex #fyp",
+  "segundos": 645,
+  "formato": "longo",
+  "textos": {
+   "titulo_youtube": "Como Identificar Tendência de Alta, Baixa e Lateral – Evite Erros Comuns",
+   "descricao_youtube": "Aprenda a reconhecer topos e fundos, identificar tendências de alta, baixa e lateral, e operar alinhado à direção predominante do mercado. Veja exemplos ilustrativos com euro‑dólar e ouro, descubra erros comuns ao ir contra a tendência e faça um exercício na conta demo. Ideal para iniciantes que já sabem ler candles. Conteúdo educativo, risco de mercado incluído.\n\n📚 🟢 Iniciante · Aula 06: Tendência de alta, de baixa e lateral\n▶ Próxima aula: Suporte e resistência\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#trade #forex #educacaofinanceira",
+   "legenda_tiktok": "Você sabe diferenciar uma tendência de alta de uma lateral? Descubra agora!",
+   "hashtags_tiktok": "#trade #forex #fyp",
+   "tags_youtube": "tendência, topos e fundos, mercado lateral, euro dólar, ouro, análise gráfica, candles, médias móveis, stop loss, trading para iniciantes, curso de trade, educação financeira, como operar a favor da tendência, erros comuns trading, conta demo"
+  },
+  "aula": {
+   "indice": 5,
+   "nivel": "iniciante",
+   "numero": 6,
+   "titulo_aula": "Tendência de alta, de baixa e lateral"
+  },
+  "id": "video-20261119-1609-18",
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261119-1609-18/como-identificar-tendencia-de-alta-baixa.mp4",
+  "capa": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261119-1609-18/como-identificar-tendencia-de-alta-baixa-capa.jpg",
+  "youtube": "https://youtu.be/AMxCCDfy3Vg",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44593419108"
+ },
+ {
+  "data": "2026-11-19T16:09:41-03:00",
+  "titulo": "Tendência: alta, baixa e lateral",
+  "assunto": "Tendência de alta, baixa e lateral",
+  "legenda": "Você sabe diferenciar uma tendência de alta de uma lateral? Descubra agora!\nAula completa no YouTube: Target Go\n\n#trade #forex #fyp",
+  "segundos": 58,
+  "formato": "curto",
+  "textos": {
+   "titulo_youtube": "Tendência: alta, baixa e lateral",
+   "descricao_youtube": "Como Identificar Tendência de Alta, Baixa e Lateral – Evite Erros Comuns\n\n▶ AULA COMPLETA: https://youtu.be/AMxCCDfy3Vg\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#trade #forex #educacaofinanceira #shorts",
+   "legenda_tiktok": "Você sabe diferenciar uma tendência de alta de uma lateral? Descubra agora!\nAula completa no YouTube: Target Go",
+   "hashtags_tiktok": "#trade #forex #fyp",
+   "tags_youtube": "tendência, topos e fundos, mercado lateral, euro dólar, ouro, análise gráfica, candles, médias móveis, stop loss, trading para iniciantes, curso de trade, educação financeira, como operar a favor da tendência, erros comuns trading, conta demo"
+  },
+  "chamada_de": "video-20261119-1609-18",
+  "id": "video-20261119-1609-18-short",
+  "aula": {
+   "indice": 5,
+   "nivel": "iniciante",
+   "numero": 6,
+   "titulo_aula": "Tendência de alta, de baixa e lateral"
+  },
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261119-1609-18/como-identificar-tendencia-de-alta-baixa-short.mp4",
+  "celular": "tiktok/video-20261119-1609-18-short.mp4",
+  "youtube": "https://youtube.com/shorts/-AT87p9lePE",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44593419108"
  }
 ]
