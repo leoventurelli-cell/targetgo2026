@@ -895,5 +895,58 @@
   "celular": "tiktok/video-20261120-0708-21-short.mp4",
   "youtube": "https://youtube.com/shorts/yLv8ywp4TxI",
   "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44715423936"
+ },
+ {
+  "data": "2026-11-20T15:43:22-03:00",
+  "titulo": "Como Identificar Suporte e Resistência no Forex e Ouro – Guia para Iniciantes",
+  "assunto": "Suporte e Resistência",
+  "legenda": "Descubra a zona que pode virar seu trade – Você já identificou o suporte certo?\n\n#trade #forex #fyp",
+  "segundos": 504,
+  "formato": "longo",
+  "textos": {
+   "titulo_youtube": "Como Identificar Suporte e Resistência no Forex e Ouro – Guia para Iniciantes",
+   "descricao_youtube": "Aprenda a reconhecer zonas de suporte e resistência no euro‑dólar e no ouro. Entenda por que o preço reage, como marcar áreas corretas, a troca de polaridade e a aplicação no H4 e no diário. Vídeo do Target Go – Trade do Zero ao Profissional.\n\n📚 🟢 Iniciante · Aula 07: Suporte e resistência\n▶ Próxima aula: Tipos de ordem: a mercado, limitada, stop loss e take profit\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#trade #forex #educacaofinanceira",
+   "legenda_tiktok": "Descubra a zona que pode virar seu trade – Você já identificou o suporte certo?",
+   "hashtags_tiktok": "#trade #forex #fyp",
+   "tags_youtube": "suporte, resistência, euro-dólar, ouro, trading para iniciantes, análise técnica, H4, gráfico diário, Target Go, curso de trade, como operar, zona de preço, troca de polaridade, exemplo prático, aula 7"
+  },
+  "aula": {
+   "indice": 6,
+   "nivel": "iniciante",
+   "numero": 7,
+   "titulo_aula": "Suporte e resistência"
+  },
+  "id": "video-20261120-1543-22",
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261120-1543-22/como-identificar-suporte-e-resistencia-n.mp4",
+  "capa": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261120-1543-22/como-identificar-suporte-e-resistencia-n-capa.jpg",
+  "youtube": "https://youtu.be/koQRQ8NCPbM",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44794119686"
+ },
+ {
+  "data": "2026-11-20T15:43:29-03:00",
+  "titulo": "Suporte e Resistência: O Guia Completo",
+  "assunto": "Suporte e Resistência",
+  "legenda": "Descubra a zona que pode virar seu trade – Você já identificou o suporte certo?\nAula completa no YouTube: Target Go\n\n#trade #forex #fyp",
+  "segundos": 58,
+  "formato": "curto",
+  "textos": {
+   "titulo_youtube": "Suporte e Resistência: O Guia Completo",
+   "descricao_youtube": "Como Identificar Suporte e Resistência no Forex e Ouro – Guia para Iniciantes\n\n▶ AULA COMPLETA: https://youtu.be/koQRQ8NCPbM\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#trade #forex #educacaofinanceira #shorts",
+   "legenda_tiktok": "Descubra a zona que pode virar seu trade – Você já identificou o suporte certo?\nAula completa no YouTube: Target Go",
+   "hashtags_tiktok": "#trade #forex #fyp",
+   "tags_youtube": "suporte, resistência, euro-dólar, ouro, trading para iniciantes, análise técnica, H4, gráfico diário, Target Go, curso de trade, como operar, zona de preço, troca de polaridade, exemplo prático, aula 7"
+  },
+  "chamada_de": "video-20261120-1543-22",
+  "id": "video-20261120-1543-22-short",
+  "aula": {
+   "indice": 6,
+   "nivel": "iniciante",
+   "numero": 7,
+   "titulo_aula": "Suporte e resistência"
+  },
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261120-1543-22/como-identificar-suporte-e-resistencia-n-short.mp4",
+  "celular": "tiktok/video-20261120-1543-22-short.mp4",
+  "youtube": "https://youtube.com/shorts/jHazu8ZzWTE",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44794119686"
  }
 ]
