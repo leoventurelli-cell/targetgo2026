@@ -948,5 +948,31 @@
   "celular": "tiktok/video-20261120-1543-22-short.mp4",
   "youtube": "https://youtube.com/shorts/jHazu8ZzWTE",
   "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44794119686"
+ },
+ {
+  "data": "2026-11-20T15:45:51-03:00",
+  "titulo": "Fed eleva chance de aumento de 0,5 ponto em dezembro",
+  "assunto": "Fed indica alta de juros em dezembro",
+  "legenda": "Você sabia que o dólar pode subir?\n\n#mercadofinanceiro #forex #fyp",
+  "segundos": 78,
+  "formato": "curto",
+  "textos": {
+   "titulo_youtube": "Fed eleva chance de aumento de 0,5 ponto em dezembro",
+   "descricao_youtube": "O Fed aumentou para 97% a probabilidade de mais um ajuste de 0,5 ponto percentual em dezembro, segundo a BigGo Finance (20/11/2026). A expectativa já pressionou dólar, ouro e S&P 500, que recuaram nos últimos dias.\n\n📰 Fonte: BigGo Finance – https://news.google.com/rss/articles/CBMidkFVX3lxTE1Wb3dMMTliUUtKaDJQZGVNeXUtNTVwOVIxczJfT3pwRUNUcGhSekVqR3Rtc0VtUldKMHJleDZDejhHSGZlMWZyZm1aeS1MMm9VNmpTblpXR09JVlBQWFF1c0hTejNUNlBIa2laQW5haHh1TUhpX2c?oc=5\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#mercadofinanceiro #forex #noticias #shorts",
+   "legenda_tiktok": "Você sabia que o dólar pode subir?",
+   "hashtags_tiktok": "#mercadofinanceiro #forex #fyp",
+   "tags_youtube": "Fed, juros, dólar, ouro, S&P500, mercado financeiro, investimentos, taxas de juros, inflacao, Lisa Cook, USDJPY, GC=F"
+  },
+  "noticia": {
+   "manchete": "Fed December Rate Hike Odds Jump to 97% as Waller Floats Half-Point Move",
+   "fonte": "BigGo Finance",
+   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1Wb3dMMTliUUtKaDJQZGVNeXUtNTVwOVIxczJfT3pwRUNUcGhSekVqR3Rtc0VtUldKMHJleDZDejhHSGZlMWZyZm1aeS1MMm9VNmpTblpXR09JVlBQWFF1c0hTejNUNlBIa2laQW5haHh1TUhpX2c?oc=5",
+   "impacto": 9.0
+  },
+  "id": "video-20261120-1545-19",
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261120-1545-19/fed-eleva-chance-de-aumento-de-0-5-ponto.mp4",
+  "celular": "tiktok/video-20261120-1545-19.mp4",
+  "youtube": "https://youtube.com/shorts/k3u-8eEvlTk",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44794669761"
  }
 ]
