@@ -842,5 +842,58 @@
   "celular": "tiktok/video-20261120-0427-18.mp4",
   "youtube": "https://youtube.com/shorts/Km3bAg_vcOg",
   "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44694881449"
+ },
+ {
+  "data": "2026-11-20T07:08:24-03:00",
+  "titulo": "Juros compostos: a força que trabalha a favor ou contra você",
+  "assunto": "Juros compostos e seu impacto",
+  "legenda": "Já pensou que os juros podem ser seu melhor aliado ou seu maior vilão? Descubra como usar a matemática a seu favor!\n\n#trade #forex #fyp",
+  "segundos": 498,
+  "formato": "longo",
+  "textos": {
+   "titulo_youtube": "Juros compostos: a força que trabalha a favor ou contra você",
+   "descricao_youtube": "Entenda a diferença entre juros simples e compostos, veja como o tempo potencializa ganhos e perdas, aprenda a fazer contas passo a passo e descubra o efeito nos investimentos mensais e nas dívidas do cartão. Ideal para quem quer dominar a matemática do trade e evitar armadilhas financeiras. Inclui exemplos práticos e demonstrações visuais. Não perca!\n\n📚 🔵 Educação Financeira · Aula 05: Juros compostos: a força que trabalha a favor ou contra você\n▶ Próxima aula: Por que algumas moedas valem mais que outras\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#trade #forex #educacaofinanceira",
+   "legenda_tiktok": "Já pensou que os juros podem ser seu melhor aliado ou seu maior vilão? Descubra como usar a matemática a seu favor!",
+   "hashtags_tiktok": "#trade #forex #fyp",
+   "tags_youtube": "juros compostos, juros simples, educação financeira, investimentos, trade, forex, euro dólar, dívida cartão, cálculo de juros, tempo e investimentos, matemática financeira, curso de trade, target go"
+  },
+  "aula": {
+   "indice": 38,
+   "nivel": "educacao",
+   "numero": 5,
+   "titulo_aula": "Juros compostos: a força que trabalha a favor ou contra você"
+  },
+  "id": "video-20261120-0708-21",
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261120-0708-21/juros-compostos-a-forca-que-trabalha-a-f.mp4",
+  "capa": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261120-0708-21/juros-compostos-a-forca-que-trabalha-a-f-capa.jpg",
+  "youtube": "https://youtu.be/6zmTqEoJafc",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44715423936"
+ },
+ {
+  "data": "2026-11-20T07:08:32-03:00",
+  "titulo": "Juros compostos: ganho ou risco?",
+  "assunto": "Juros compostos e seu impacto",
+  "legenda": "Já pensou que os juros podem ser seu melhor aliado ou seu maior vilão? Descubra como usar a matemática a seu favor!\nAula completa no YouTube: Target Go\n\n#trade #forex #fyp",
+  "segundos": 58,
+  "formato": "curto",
+  "textos": {
+   "titulo_youtube": "Juros compostos: ganho ou risco?",
+   "descricao_youtube": "Juros compostos: a força que trabalha a favor ou contra você\n\n▶ AULA COMPLETA: https://youtu.be/6zmTqEoJafc\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#trade #forex #educacaofinanceira #shorts",
+   "legenda_tiktok": "Já pensou que os juros podem ser seu melhor aliado ou seu maior vilão? Descubra como usar a matemática a seu favor!\nAula completa no YouTube: Target Go",
+   "hashtags_tiktok": "#trade #forex #fyp",
+   "tags_youtube": "juros compostos, juros simples, educação financeira, investimentos, trade, forex, euro dólar, dívida cartão, cálculo de juros, tempo e investimentos, matemática financeira, curso de trade, target go"
+  },
+  "chamada_de": "video-20261120-0708-21",
+  "id": "video-20261120-0708-21-short",
+  "aula": {
+   "indice": 38,
+   "nivel": "educacao",
+   "numero": 5,
+   "titulo_aula": "Juros compostos: a força que trabalha a favor ou contra você"
+  },
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261120-0708-21/juros-compostos-a-forca-que-trabalha-a-f-short.mp4",
+  "celular": "tiktok/video-20261120-0708-21-short.mp4",
+  "youtube": "https://youtube.com/shorts/yLv8ywp4TxI",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44715423936"
  }
 ]
