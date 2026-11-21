@@ -974,5 +974,31 @@
   "celular": "tiktok/video-20261120-1545-19.mp4",
   "youtube": "https://youtube.com/shorts/k3u-8eEvlTk",
   "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44794669761"
+ },
+ {
+  "data": "2026-11-21T04:22:10-03:00",
+  "titulo": "Ouro cai cerca de 7% antes do CPI dos EUA – o que esperar?",
+  "assunto": "Ouro e CPI dos EUA",
+  "legenda": "CPI vai virar o jogo do ouro?\n\n#mercadofinanceiro #forex #fyp",
+  "segundos": 78,
+  "formato": "curto",
+  "textos": {
+   "titulo_youtube": "Ouro cai cerca de 7% antes do CPI dos EUA – o que esperar?",
+   "descricao_youtube": "O ouro (XAU/USD) recuou cerca de 7,3% entre 16/11 e 20/11, enquanto o dólar subiu 0,42% e o euro caiu 0,47%. A StoneX indica que o próximo CPI dos EUA pode mudar as expectativas de juros do Fed, impactando dólar, ouro e demais mercados.\n\n📰 Fonte: StoneX – https://news.google.com/rss/articles/CBMingFBVV95cUxNOWo3UG4waFlMRjVtTjhFTjNOOF9Ga05VdjFqN0tMUjNwVVY0VkY2bmV1blF0aWxnOHNQZk9GRTJIMXluaDhKelE0VU1lbjBvS3lqdHpNRGtfOXRicHFoLVAzTEJILS11MEgxQ3dOMnl3RjV4eXV5R1UxZ0hlQVBvNFBhSnpwM2pYbWIwQUZxZlJYdnJOTENBTDRxQmFEdw?oc=5\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#mercadofinanceiro #forex #noticias #shorts",
+   "legenda_tiktok": "CPI vai virar o jogo do ouro?",
+   "hashtags_tiktok": "#mercadofinanceiro #forex #fyp",
+   "tags_youtube": "ouro, cpi, dólar, euro, investimento, forex, commodity, StoneX, análise, trading"
+  },
+  "noticia": {
+   "manchete": "Gold coils for potential breakout as US CPI looms",
+   "fonte": "StoneX",
+   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNOWo3UG4waFlMRjVtTjhFTjNOOF9Ga05VdjFqN0tMUjNwVVY0VkY2bmV1blF0aWxnOHNQZk9GRTJIMXluaDhKelE0VU1lbjBvS3lqdHpNRGtfOXRicHFoLVAzTEJILS11MEgxQ3dOMnl3RjV4eXV5R1UxZ0hlQVBvNFBhSnpwM2pYbWIwQUZxZlJYdnJOTENBTDRxQmFEdw?oc=5",
+   "impacto": 8.0
+  },
+  "id": "video-20261121-0421-21",
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261121-0421-21/ouro-cai-cerca-de-7-antes-do-cpi-dos-eua.mp4",
+  "celular": "tiktok/video-20261121-0421-21.mp4",
+  "youtube": "https://youtube.com/shorts/gc6cYuKB4jQ",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44879710151"
  }
 ]
