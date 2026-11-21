@@ -1000,5 +1000,58 @@
   "celular": "tiktok/video-20261121-0421-21.mp4",
   "youtube": "https://youtube.com/shorts/gc6cYuKB4jQ",
   "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44879710151"
+ },
+ {
+  "data": "2026-11-21T07:08:04-03:00",
+  "titulo": "Por que o Euro vale mais que o Real? Entenda a lógica",
+  "assunto": "Por que algumas moedas valem mais que outras",
+  "legenda": "Você acha que moeda cara = país rico? Descubra a verdade!\n\n#trade #forex #fyp",
+  "segundos": 562,
+  "formato": "longo",
+  "textos": {
+   "titulo_youtube": "Por que o Euro vale mais que o Real? Entenda a lógica",
+   "descricao_youtube": "Nesta aula você vai descobrir por que moedas como o euro têm valor superior ao real. Vamos analisar juros, inflação, confiança e balança comercial. Entenda como esses fatores afetam a taxa de câmbio e por que isso não indica riqueza nacional. Use exemplos práticos com euro‑dólar e real‑dólar. Ideal para quem estuda trade e educação financeira.\n\n📚 🔵 Educação Financeira · Aula 06: Por que algumas moedas valem mais que outras\n▶ Próxima aula: Por que o dólar sobe e desce\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#trade #forex #educacaofinanceira",
+   "legenda_tiktok": "Você acha que moeda cara = país rico? Descubra a verdade!",
+   "hashtags_tiktok": "#trade #forex #fyp",
+   "tags_youtube": "trade, forex, educacao financeira, moeda, euro, real, juros, inflacao, balanca comercial, confianca, analise de moeda, curso de trade, investimento, mercado cambial, economia"
+  },
+  "aula": {
+   "indice": 39,
+   "nivel": "educacao",
+   "numero": 6,
+   "titulo_aula": "Por que algumas moedas valem mais que outras"
+  },
+  "id": "video-20261121-0707-25",
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261121-0707-25/por-que-o-euro-vale-mais-que-o-real-ente.mp4",
+  "capa": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261121-0707-25/por-que-o-euro-vale-mais-que-o-real-ente-capa.jpg",
+  "youtube": "https://youtu.be/JPqXajPG8Bg",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44892181655"
+ },
+ {
+  "data": "2026-11-21T07:08:11-03:00",
+  "titulo": "Euro vale mais que Real? Descubra",
+  "assunto": "Por que algumas moedas valem mais que outras",
+  "legenda": "Você acha que moeda cara = país rico? Descubra a verdade!\nAula completa no YouTube: Target Go\n\n#trade #forex #fyp",
+  "segundos": 58,
+  "formato": "curto",
+  "textos": {
+   "titulo_youtube": "Euro vale mais que Real? Descubra",
+   "descricao_youtube": "Por que o Euro vale mais que o Real? Entenda a lógica\n\n▶ AULA COMPLETA: https://youtu.be/JPqXajPG8Bg\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#trade #forex #educacaofinanceira #shorts",
+   "legenda_tiktok": "Você acha que moeda cara = país rico? Descubra a verdade!\nAula completa no YouTube: Target Go",
+   "hashtags_tiktok": "#trade #forex #fyp",
+   "tags_youtube": "trade, forex, educacao financeira, moeda, euro, real, juros, inflacao, balanca comercial, confianca, analise de moeda, curso de trade, investimento, mercado cambial, economia"
+  },
+  "chamada_de": "video-20261121-0707-25",
+  "id": "video-20261121-0707-25-short",
+  "aula": {
+   "indice": 39,
+   "nivel": "educacao",
+   "numero": 6,
+   "titulo_aula": "Por que algumas moedas valem mais que outras"
+  },
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261121-0707-25/por-que-o-euro-vale-mais-que-o-real-ente-short.mp4",
+  "celular": "tiktok/video-20261121-0707-25-short.mp4",
+  "youtube": "https://youtube.com/shorts/Pjz9H_HAbHQ",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44892181655"
  }
 ]
