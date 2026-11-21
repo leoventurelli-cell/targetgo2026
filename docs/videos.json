@@ -1053,5 +1053,58 @@
   "celular": "tiktok/video-20261121-0707-25-short.mp4",
   "youtube": "https://youtube.com/shorts/Pjz9H_HAbHQ",
   "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44892181655"
+ },
+ {
+  "data": "2026-11-21T14:36:34-03:00",
+  "titulo": "Tipos de ordem: a mercado, limitada, stop loss e take profit – Aprenda do zero",
+  "assunto": "Tipos de ordem: mercado, limitada, stop loss e take profit",
+  "legenda": "Qual ordem protege mais seu trade? Descubra e teste na conta demo!\n\n#trade #forex #fyp",
+  "segundos": 547,
+  "formato": "longo",
+  "textos": {
+   "titulo_youtube": "Tipos de ordem: a mercado, limitada, stop loss e take profit – Aprenda do zero",
+   "descricao_youtube": "Nesta aula você vai entender a diferença entre ordem a mercado e ordens pendentes (buy limit, sell limit, buy stop e sell stop). Aprenda a configurar stop loss e take profit e descubra por que toda operação precisa de proteção. Exemplos práticos com euro‑dólar, erros comuns e checklist final. Ideal para iniciantes que já estudaram suporte e resistência.\n\n📚 🟢 Iniciante · Aula 08: Tipos de ordem: a mercado, limitada, stop loss e take profit\n▶ Próxima aula: Por que a maioria perde e como não ser a maioria\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#trade #forex #educacaofinanceira",
+   "legenda_tiktok": "Qual ordem protege mais seu trade? Descubra e teste na conta demo!",
+   "hashtags_tiktok": "#trade #forex #fyp",
+   "tags_youtube": "trade, forex, ordem a mercado, stop loss, take profit, aula de trade, iniciante, euro dolar, análise técnica, suporte e resistência, ordens pendentes, mercado financeiro, educação financeira, investimento, estratégias de trade"
+  },
+  "aula": {
+   "indice": 7,
+   "nivel": "iniciante",
+   "numero": 8,
+   "titulo_aula": "Tipos de ordem: a mercado, limitada, stop loss e take profit"
+  },
+  "id": "video-20261121-1436-26",
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261121-1436-26/tipos-de-ordem-a-mercado-limitada-stop-l.mp4",
+  "capa": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261121-1436-26/tipos-de-ordem-a-mercado-limitada-stop-l-capa.jpg",
+  "youtube": "https://youtu.be/GefQmKw12R8",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44930068083"
+ },
+ {
+  "data": "2026-11-21T14:36:43-03:00",
+  "titulo": "Ordem a mercado x pendente – O que usar?",
+  "assunto": "Tipos de ordem: mercado, limitada, stop loss e take profit",
+  "legenda": "Qual ordem protege mais seu trade? Descubra e teste na conta demo!\nAula completa no YouTube: Target Go\n\n#trade #forex #fyp",
+  "segundos": 58,
+  "formato": "curto",
+  "textos": {
+   "titulo_youtube": "Ordem a mercado x pendente – O que usar?",
+   "descricao_youtube": "Tipos de ordem: a mercado, limitada, stop loss e take profit – Aprenda do zero\n\n▶ AULA COMPLETA: https://youtu.be/GefQmKw12R8\n\n⚠️ Conteúdo educativo. Não é recomendação de investimento nem promessa de lucro. Operar no mercado envolve risco de perda, inclusive de todo o capital.\n\n#trade #forex #educacaofinanceira #shorts",
+   "legenda_tiktok": "Qual ordem protege mais seu trade? Descubra e teste na conta demo!\nAula completa no YouTube: Target Go",
+   "hashtags_tiktok": "#trade #forex #fyp",
+   "tags_youtube": "trade, forex, ordem a mercado, stop loss, take profit, aula de trade, iniciante, euro dolar, análise técnica, suporte e resistência, ordens pendentes, mercado financeiro, educação financeira, investimento, estratégias de trade"
+  },
+  "chamada_de": "video-20261121-1436-26",
+  "id": "video-20261121-1436-26-short",
+  "aula": {
+   "indice": 7,
+   "nivel": "iniciante",
+   "numero": 8,
+   "titulo_aula": "Tipos de ordem: a mercado, limitada, stop loss e take profit"
+  },
+  "mp4": "https://github.com/leoventurelli-cell/targetgo2026/releases/download/video-20261121-1436-26/tipos-de-ordem-a-mercado-limitada-stop-l-short.mp4",
+  "celular": "tiktok/video-20261121-1436-26-short.mp4",
+  "youtube": "https://youtube.com/shorts/toV0u8BOv04",
+  "execucao": "https://github.com/leoventurelli-cell/targetgo2026/actions/runs/44930068083"
  }
 ]
